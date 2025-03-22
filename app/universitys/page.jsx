@@ -64,6 +64,7 @@ import osmlogo from "../../Public/images/OSTIM-Technical.jpg";
 import uskcover from "../../Public/images/Uskudar-University.jpg";
 import usklogo from "../../Public/images/Uskudar-University-1.jpg";
 import { useTranslation } from "react-i18next";
+import Search from "../_components/Search";
 
 const images = {
   ar: {
@@ -287,6 +288,7 @@ const universitys = () => {
           height={800}
         />
       </div>
+      <Search />
       <div>
         <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:w-[25rem] mt-12 mb-16 max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
           {t("جامعتنا")}

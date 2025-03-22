@@ -1,0 +1,51 @@
+<div className="grid bg-fuchsia-800 pl-6 mr-[8.25%] max-lg:w-[75rem] max-lg:rounded-lg max-lg:mr-8 max-lg:px-6 overflow-hidden pr-9 mt-20 w-11/12 rounded-r-full max-sm:w-[75rem] max-sm:rounded-lg max-sm:px-5 max-sm:text-center">
+        <Image src={logo} className="w-56 mt-5 mx-auto" />
+        <h1 className="text-3xl text-yellow-500 font-bold mx-auto mb-5 mt-2">
+          {t("لماذا تختار Deva Education")}
+        </h1>
+        <p className="text-xl pr-20 font-bold py-3 max-sm:p-0 max-sm:-mr-6 max-lg:-mr-24">
+          <b className="p-1">✅</b>
+
+          {t(
+            "الاحترافية والمصداقية: تقدم Deva Education خدمات استشارية موثوقة تعتمد على الشفافية والمصداقية في جميع مراحل القبول الجامعي."
+          )}
+        </p>
+        <p className="text-xl mx-auto font-bold py-3 max-sm:-mr-3 max-lg:-mr-4">
+          <b className="p-1">✅</b>
+
+          {t(
+            "تقديم حلول متكاملة: من استشارات اختيار التخصص والجامعة، إلى متابعة طلب القبول والإقامة، نقدم لك حزمة متكاملة من الخدمات التعليمية"
+          )}
+        </p>
+        <p className="text-xl mx-auto font-bold py-3 max-sm:-mr-3 max-lg:-mr-4">
+          <b className="p-1">✅</b>
+
+          {t(
+            "شراكات مع أفضل الجامعات: شراكاتنا الواسعة مع الجامعات التركية المرموقة تضمن لك الوصول إلى أفضل البرامج التعليمية بخصومات مميزة"
+          )}
+        </p>
+        <p className="text-xl pr-20 font-bold py-3 max-sm:pr-0 max-sm:-mr-32 max-lg:-mr-24">
+          {t(
+            "دعم مخصص للطلاب: نؤمن بأن كل طالب لديه احتياجات فريدة، لذا نقدم استشارات مخصصة تراعي أهدافك الأكاديمية والمهنية"
+          )}
+        </p>
+        <p className="text-xl pr-20 font-bold py-3 max-sm:pr-0 max-sm:-mr-24 max-lg:-mr-24">
+          <b className="p-1">✅</b>
+
+          {t(
+            "فريق ذو خبرة: يضم فريقنا نخبة من المستشارين التعليميين ذوي الخبرة في التعامل مع الطلاب الدوليين، لتقديم تجربة سلسة وناجحة"
+          )}
+        </p>
+        <p className="text-xl pr-20 font-bold py-3 max-sm:pr-0 max-sm:-mr-3 max-lg:-mr-[5.8rem]">
+          <b className="p-1">✅</b>
+          {t(
+            "خدمات ما بعد القبول: لا ينتهي دورنا عند حصولك على القبول الجامعي بل نستمر في دعمك من خلال خدمات الإقامة و معادلة الشهادات والتوجيه"
+          )}
+        </p>
+        <p className="text-xl pr-28 font-bold py-3 max-lg:absolute max-lg:mt-[78%] max-lg:-mr-12  max-sm:pr-0">
+          {t("الأكاديمي واكتشاف أروع الأماكن الترفيهية والثقافية")}
+        </p>
+        <p className="text-2xl text-yellow-400 mx-auto font-bold py-6">
+          {t("Deva Education – نرسم طريقك نحو مستقبل أكاديمي مشرق")}
+        </p>
+      </div>

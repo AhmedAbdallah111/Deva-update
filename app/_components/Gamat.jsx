@@ -473,10 +473,10 @@ export default function UniversitiesSection() {
   const universitiesList = universities[lang] || universities["ar"]; // في حال لم تكن اللغة مدعومة، يتم عرض العربية كافتراضية
 
   return (
-    <section className="text-center">
+    <section className="text-center py-20 my-16">
       {/* عنوان مع أنميشن */}
       <motion.h1
-        className="text-center text-3xl font-bold bg-fuchsia-900 text-white rounded-full tracking-wide max-lg:mr-[45%] py-2 mx-auto w-fit px-8 sm:text-5xl"
+        className="text-3xl font-bold text-center mb-6 text-[#7a0066c6] w-fit py-4  px-6 rounded-tl-2xl border border-r-red-900 border-l-red-900 border-b-fuchsia-700 border-t-fuchsia-700 rounded-br-2xl  bg-[#eed1e8] mx-auto"
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -499,7 +499,7 @@ export default function UniversitiesSection() {
           {[...universitiesList].map((uni, index) => (
             <motion.div
               key={index}
-              className="bg-white min-w-72 h-auto pb-2 rounded-lg shadow-lg border border-gray-300"
+              className="bg-white min-w-72 h-auto pb-2 rounded-lg shadow-xl border border-gray-300"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

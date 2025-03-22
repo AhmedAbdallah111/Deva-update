@@ -390,23 +390,23 @@ const uskudar = () => {
                 )}
                 <br />
                 {t(
-                  " البرامج الأكاديمية المتنوعة: تقدم الجامعة مجموعة واسعة من البرامج الأكاديمية في مختلف التخصصات مثل الطب، وعلاج النطق، والهندسة، والعلوم الاجتماعية، والتمريض، والفنون، وغيرها"
+                  "البرامج الأكاديمية المتنوعة: تقدم الجامعة مجموعة واسعة من البرامج الأكاديمية في مختلف التخصصات مثل الطب، وعلاج النطق، والهندسة، والعلوم الاجتماعية، والتمريض، والفنون، وغيرها"
                 )}
                 <br />
                 {t(
-                  " المنهج الدراسي المتطور: تلتزم الجامعة بتقديم مناهج حديثة ومطورة تتماشى مع احتياجات سوق العمل ومتطلبات العصر، مما يضمن للطلاب اكتساب المعرفة والمهارات التي يحتاجونها"
+                  "المنهج الدراسي المتطور: تلتزم الجامعة بتقديم مناهج حديثة ومطورة تتماشى مع احتياجات سوق العمل ومتطلبات العصر، مما يضمن للطلاب اكتساب المعرفة والمهارات التي يحتاجونها"
                 )}
                 <br />
                 {t(
-                  " المرافق التعليمية المتطورة: تحتوي الجامعة على قاعات دراسية مجهزة بأحدث التقنيات، بالإضافة إلى مختبرات علمية خاصة بتخصصات مثل الطب وعلوم الحياة"
+                  "المرافق التعليمية المتطورة: تحتوي الجامعة على قاعات دراسية مجهزة بأحدث التقنيات، بالإضافة إلى مختبرات علمية خاصة بتخصصات مثل الطب وعلوم الحياة"
                 )}
                 <br />
                 {t(
-                  " التدريب العملي: توفر الجامعة فرصًا واسعة للتدريب العملي في مختلف المجالات. في التخصصات الطبية والصحية، يتمكن الطلاب من إجراء التدريب في المستشفيات والمراكز الصحية"
+                  "التدريب العملي: توفر الجامعة فرصًا واسعة للتدريب العملي في مختلف المجالات. في التخصصات الطبية والصحية، يتمكن الطلاب من إجراء التدريب في المستشفيات والمراكز الصحية"
                 )}
                 <br />
                 {t(
-                  " فرص البحث العلمي: تشجع الجامعة الطلاب على الانخراط في الأنشطة البحثية من خلال مراكز البحث الخاصة بها، مما يتيح للطلاب الفرصة لتطوير مهاراتهم في البحث العلمي والمشاركة في مشاريع مبتكرة"
+                  "فرص البحث العلمي: تشجع الجامعة الطلاب على الانخراط في الأنشطة البحثية من خلال مراكز البحث الخاصة بها، مما يتيح للطلاب الفرصة لتطوير مهاراتهم في البحث العلمي والمشاركة في مشاريع مبتكرة"
                 )}
               </p>
               <Image src={altnnn} className="mt-5 mx-auto" />
@@ -417,7 +417,7 @@ const uskudar = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  الأوراق المطلوبة للتقديم على جامعة اسكودار
+                  {t("الأوراق المطلوبة للتقديم على جامعة اسكودار")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -438,58 +438,64 @@ const uskudar = () => {
 
               <div className="flex flex-wrap gap-12 justify-center">
                 <div className="absolute text-fuchsia-700 text-4xl font-bold mt-36 max-lg:text-2xl">
-                  <p className="mr-6 max-lg:mr-16">بكالوريوس</p>
+                  <p className="mr-6 max-lg:mr-16">{t("بكالوريوس")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem]">
-                    شهادة الثانوية العامة
+                    {t("شهادة الثانوية العامة")}
                     <br />
                     <hr className="my-1" />
-                    كشف الدرجات
+                    {t("كشف الدرجات")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("جواز السفر")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <Image src={awrak} className="" />
                 <div className="absolute text-fuchsia-700 mr-[45%] text-4xl font-bold mt-36 max-lg:mr-[40rem] max-lg:text-2xl">
-                  <p className="mr-8  max-lg:mr-28">ماجستير</p>
+                  <p className="mr-8  max-lg:mr-28">{t("ماجستير")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] max-lg:mr-8">
-                    شهادة البكالوريوس <br />
-                    <hr className="my-1" />
-                    كشف الدرجات
+                    {t("شهادة البكالوريوس")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("كشف الدرجات")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("جواز السفر")}
+                    <br />
+                    <hr className="my-1" />
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <div className="absolute text-fuchsia-700 ml-[45%] text-4xl font-bold mt-36 max-lg:ml-[40rem] max-lg:text-2xl">
-                  <p className="mr-12 max-lg:mr-24">دبلومة</p>
+                  <p className="mr-12 max-lg:mr-24">{t("دبلومة")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] max-lg:ml-8 ">
-                    شهادة الثانوية العامة
+                    {t("شهادة الثانوية العامة")}
                     <br />
                     <hr className="my-1" />
-                    كشف الدرجات
+                    {t("كشف الدرجات")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("جواز السفر ")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <div className="absolute text-fuchsia-700 text-4xl mt-[40%] font-bold max-lg:mt-[38rem]  max-lg:text-2xl">
-                  <p className="mr-5 max-lg:mr-20">الدكتوراة</p>
+                  <p className="mr-5 max-lg:mr-20">{t("الدكتوراة")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] ">
-                    شهادة الماجستير <br />
-                    <hr className="my-1" />
-                    كشف الدرجات
+                    {t("شهادة الماجستير")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("كشف الدرجات")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("جواز السفر ")}
+                    <br />
+                    <hr className="my-1" />
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <Image src={awrak} className="" />
@@ -503,7 +509,7 @@ const uskudar = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  كليات وتخصصات جامعة اسكودار
+                  {t("كليات وتخصصات جامعة اسكودار")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -524,9 +530,9 @@ const uskudar = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    دبلومه{" "}
+                    {t("دبلومه")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عامان دراسي)
+                      {t("مدة الدراسة عامان دراسي")}
                     </b>
                   </h2>
 
@@ -601,40 +607,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}{" "}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}{" "}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}{" "}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -694,39 +699,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Operating Room Services -خدمات غرف العمليات
+                            {t("خدمات غرف العمليات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -786,31 +791,31 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Physiotherapy -العلاج الطبيعي
+                            {t("العلاج الطبيعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
                             قبل الخصم :
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
@@ -818,7 +823,7 @@ const uskudar = () => {
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -878,39 +883,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Laboratory Techniques -تقنيات المخابر الطبية
+                            {t("تقنيات المخابر الطبية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -970,39 +975,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Anesthesia -التخدير
+                            {t("التخدير")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1062,39 +1067,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            First Aid And Emergency -الإسعافات الأولية و الطوارئ
+                            {t("الإسعافات الأولية والطوارئ")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1154,39 +1159,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Oral And Dental Health -صحة الفم و الأسنان
+                            {t("صحة الفم والأسنان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1246,39 +1251,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Work-العمل الاجتماعي
+                            {t("العمل الاجتماعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1338,39 +1343,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Audiometry -الأذن و قياس السمع
+                            {t("الأذن وقياس السمع")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1430,39 +1435,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Opticianry -البصريات
+                            {t("البصريات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1522,39 +1527,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Radiotherapy -العلاج الإشعاعي
+                            {t("العلاج الإشعاعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1614,39 +1619,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Imaging Techniques -تقنيات التصوير الطبي
+                            {t("تقنيات التصوير الطبي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1706,40 +1711,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Biomedical Device Technology -تكنلوجيا المعدات
-                            الطبية
+                            {t("تكنولوجيا المعدات الطبية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1799,39 +1803,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dental Prosthesis Technology -تقنية التعويضات السنية
+                            {t("تقنية التعويضات السنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1891,39 +1895,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dialysis -غسيل الكلى
+                            {t("غسيل الكلى")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -1983,40 +1987,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Documentation And Secretarial -السكرتاريا
-                            الطبية و التوثيق
+                            {t("السكرتاريا الطبية والتوثيق")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2076,40 +2079,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Pathology Laboratory Techniques -تقنيات مخابر
-                            الأمراض
+                            {t("تقنيات مخابر الأمراض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2169,39 +2171,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Perfusion Techniques -تقنيات الحقن و القسطرة
+                            {t("تقنيات الحقن والقسطرة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2261,39 +2263,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Podology -علم القدم
+                            {t("علم القدم")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2353,39 +2355,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Pharmacy Services -خدمات الصيدلة
+                            {t("خدمات الصيدلة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2445,39 +2447,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Food Technology -تكنلوجيا التغذية
+                            {t("تكنولوجيا التغذية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2537,40 +2539,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Emergency And Disaster Management -إدارة الطوارئ و
-                            الكوارث
+                            {t("إدارة الطوارئ والكوارث")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2630,40 +2631,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Hair Care And Beauty Services -العناية بالشعر و
-                            الخدمات التجميلية
+                            {t("العناية بالشعر والخدمات التجميلية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2723,39 +2723,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Autopsy Assistantship -مساعد تشريح
+                            {t("مساعد تشريح")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2815,40 +2815,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Promotion And Marketing -الدعاية الطبية و
-                            التسويق
+                            {t("الدعاية الطبية والتسويق")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -2908,40 +2907,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electro Neurophysiology -الفيزيولوجيا الكهربائية
-                            العصبية
+                            {t("الفيزيولوجيا الكهربائية العصبية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3001,39 +2999,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Institutions Management -إدارة المنشآت الصحية
+                            {t("إدارة المنشآت الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3093,39 +3091,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Elderly Care -العناية بكبار السن
+                            {t("العناية بكبار السن")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3185,40 +3183,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Orthopaedic Prosthesis And Orthesis -الأطراف
-                            الصناعية و تقويم العظام
+                            {t("الأطراف الصناعية وتقويم العظام")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3278,40 +3275,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Disabled Care And Rehabilitation -العناية بذوي
-                            الاحتياجات الخاصة
+                            {t("العناية بذوي الاحتياجات الخاصة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3371,40 +3367,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Protection And Nursing Services -خدمات التمريض
-                            و العناية بالطفل
+                            {t("خدمات التمريض والعناية بالطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3464,39 +3459,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Environmental Health -الصحة البيئية
+                            {t("الصحة البيئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3556,40 +3551,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Information System Technician -تقنيات نظم
-                            المعلومات الصحية
+                            {t("تقنيات نظم المعلومات الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -3649,409 +3643,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Home-Care Service -الخدمات الصحية المنزلية
+                            {t("الخدمات الصحية المنزلية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2545$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Home-Care Service -الخدمات الصحية المنزلية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              2545${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2545$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medicinal And Aromatic Plants -النباتات الطبية و
-                            العطرية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              2545${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2545$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Merchant Seaman’S Health -صحة بحارة السفن التجارية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              2545${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2545$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nuclear Technology And Radiation Safety -التكنلوجيا
-                            النووية و السلامة الإشعاعية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              2545${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -4112,39 +3736,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Security -الأمان الاجتماعي
+                            {t("النباتات الطبية والعطرية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -4204,39 +3828,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Home Health Nursing -التمريض المنزلي
+                            {t("صحة بحارة السفن التجارية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -4296,39 +3920,316 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("التكنولوجيا النووية والسلامة الإشعاعية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               2545${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2545$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("اسكودار")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الأمان الاجتماعي")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              2545${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2545$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("اسكودار")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("التمريض المنزلي")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              2545${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2545$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("اسكودار")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تنمية الطفل")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              2545${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2545$
                             </p>
@@ -4343,9 +4244,10 @@ const uskudar = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    بكالوريوس
+                    {t("بكالوريوس")}
+
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة 4اعوام دراسية)
+                      {t("مدة الدراسة 4اعوام دراسية")}
                     </b>
                   </h2>
 
@@ -4420,39 +4322,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medicine - الطب البشري{" "}
+                            {t("الطب البشري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               16300$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               16300$
                             </p>
@@ -4512,39 +4414,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medicine - الطب البشري{" "}
+                            {t("الطب البشري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               22410$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               22410$
                             </p>
@@ -4604,39 +4506,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dentistry-طب الأسنان
+                            {t("طب الأسنان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               15280$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               15280$
                             </p>
@@ -4696,39 +4598,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </p>
@@ -4788,40 +4690,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </p>
@@ -4881,39 +4782,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Software Engineering - هندسة البرمجيات
+                            {t("هندسة البرمجيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </p>
@@ -4973,39 +4874,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Industrial Engineering - الهندسة الصناعية
+                            {t("الهندسة الصناعية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               11000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8250$
                             </p>
@@ -5065,40 +4966,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5158,40 +5058,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3970$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3970$
                             </p>
@@ -5251,39 +5150,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Psychology - علم النفس
+                            {t("علم النفس")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5343,39 +5242,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Psychology - علم النفس
+                            {t("علم النفس")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </p>
@@ -5435,39 +5334,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sociology - علم الاجتماع
+                            {t("علم الاجتماع")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5527,40 +5426,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Radio And Television Programming - راديو وتلفزيون
-                            وسينما
+                            {t("راديو وتلفزيون وسينما")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5620,40 +5518,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Physiotherapy And Rehabilitation - العلاج الطبيعي
-                            وإعادة التأهيل
+                            {t("العلاج الطبيعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5713,39 +5610,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("التمريض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5805,39 +5702,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nutrition And Dietetics -التغذية والحمية
+                            {t("التغذية والحمية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5897,39 +5794,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Midwifery - القبالة
+                            {t("القبالة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -5989,7 +5886,7 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
@@ -5999,30 +5896,29 @@ const uskudar = () => {
                             التخصص:
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6082,39 +5978,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Chemical Engineering - الهندسة الكيميائية
+                            {t("الهندسة الكيميائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </p>
@@ -6174,40 +6070,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            English Translation And Interpreting - الترجمة
-                            الإنجليزية والترجمة الفورية
+                            {t("الترجمة الإنجليزية والترجمة الفورية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3970$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3970$
                             </p>
@@ -6267,39 +6162,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Advertising -الدعاية و الإعلان
+                            {t("الدعاية والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6359,40 +6254,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology And Genetics - علم الأحياء الجزيئي
-                            وعلم الوراثة
+                            {t("علم الأحياء الجزيئي وعلم الوراثة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6452,40 +6346,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology And Genetics - علم الأحياء الجزيئي
-                            وعلم الوراثة
+                            {t("علم الأحياء الجزيئي وعلم الوراثة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </p>
@@ -6545,40 +6438,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6638,41 +6531,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6732,41 +6624,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Communication - وسائل الإعلام
-                            والاتصالات الجديدة
+                            {t("وسائل الإعلام والاتصالات الجديدة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6826,41 +6717,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cartoon And Animation - الرسوم المتحركة والرسوم
-                            المتحركة
+                            {t("الرسوم المتحركة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -6920,40 +6810,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Journalism - الصحافة
+                            {t("الصحافة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7013,40 +6903,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            History - التاريخ
+                            {t("التاريخ")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7106,41 +6996,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7200,40 +7089,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Work-العمل الاجتماعي
+                            {t("العمل الاجتماعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7293,40 +7182,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Bioengineering - الهندسة الحيوية
+                            {t("الهندسة الحيوية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8250$
                             </p>
@@ -7386,40 +7275,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Forensic Sciences - علوم الطب الشرعي
+                            {t("علوم الطب الشرعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7480,40 +7369,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Perfusion Techniques -تقنيات الحقن و القسطرة
+                            {t("تقنيات الحقن والقسطرة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7573,40 +7462,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7666,40 +7555,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Philosophy-الفلسفة
+                            {t("  الفلسفة ")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3260$
                             </p>
@@ -7714,9 +7603,9 @@ const uskudar = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    ماجستير بدون أطروحة{" "}
+                    {t("ماجستير بدون أطروحة")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عام ونصف دراسي)
+                      {t("مدة الدراسة عام ونصف دراسي")}
                     </b>
                   </h2>
 
@@ -7791,39 +7680,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Criminal Justice-العدالة الجنائية
+                            {t("العدالة الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -7883,39 +7772,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </p>
@@ -7975,39 +7864,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -8067,40 +7956,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4585$
                             </p>
@@ -8161,39 +8049,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("التمريض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8253,39 +8141,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nutrition And Dietetics -التغذية والحمية
+                            {t("التغذية والحمية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8345,40 +8233,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8438,39 +8325,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Chemical Engineering - الهندسة الكيميائية
+                            {t("الهندسة الكيميائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8530,40 +8417,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Artificial Intelligence Engineering - هندسة الذكاء
-                            الاصطناعي
+                            {t("هندسة الذكاء الاصطناعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8623,39 +8509,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8715,40 +8601,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8808,40 +8693,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8901,39 +8785,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Work-العمل الاجتماعي
+                            {t("العمل الاجتماعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -8993,39 +8877,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Bioengineering - الهندسة الحيوية
+                            {t("الهندسة الحيوية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9085,39 +8969,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Bioengineering - الهندسة الحيوية
+                            {t("الهندسة الحيوية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9178,40 +9062,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Forensic Science-العلوم الجنائية
+                            {t("العلوم الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4365$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4365$
                             </p>
@@ -9271,39 +9155,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9363,39 +9247,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Clinical Psychology-علم النفس السريري
+                            {t("علم النفس السريري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               13750$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               13750$
                             </p>
@@ -9455,39 +9339,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Family Councelling-الإرشاد النفسي العائلي
+                            {t("الإرشاد النفسي العائلي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9547,39 +9431,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuroscience-علم الأعصاب
+                            {t("علم الأعصاب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9639,39 +9523,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuroscience-علم الأعصاب
+                            {t("علم الأعصاب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -9731,39 +9615,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cyber Security -الأمن المعلوماتي و السيبراني
+                            {t("امن المعلومات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9823,39 +9707,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cyber Security -الأمن المعلوماتي و السيبراني
+                            {t("امن المعلومات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -9915,39 +9799,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الادارة الهندسية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10007,39 +9891,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الادارة الهندسية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10099,39 +9983,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Applied Psychology-علم النفس التطبيقي
+                            {t("علم النفس التطبيقي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5655$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5372$
                             </p>
@@ -10191,40 +10075,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Media And Cultural Studies-الإعلام و الدراسات
-                            الثقافية
+                            {t("الإعلام والدراسات الثقافية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10284,40 +10167,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing And Forensic Midwifery-التمريض و القبالة
-                            الجنائية
+                            {t("التمريض والقبالة الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10378,39 +10260,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Biotechnology-التكنولوجيا البيولوجية
+                            {t("التكنولوجيا البيولوجية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10470,40 +10352,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Addiction Consulting And Rehabilitation-إستشارات
-                            الإدمان و إعادة التأهيل
+                            {t("إستشارات الإدمان وإعادة التأهيل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10563,39 +10444,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Journalism-الإعلام الجديد و الصحافة
+                            {t("الإعلام الجديد و الصحافة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10655,39 +10536,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuromarketing-التسويق الفكري
+                            {t("التسويق الفكري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10747,39 +10628,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sufi Culture And Literature-الثقافة الصوفية و آدابها
+                            {t("الثقافة الصوفية و آدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4075$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4075$
                             </p>
@@ -10839,39 +10720,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology-البيولوجيا الجزيئية
+                            {t("البيولوجيا الجزيئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10931,39 +10812,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology-البيولوجيا الجزيئية
+                            {t("البيولوجيا الجزيئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3465$
                             </p>
@@ -10978,9 +10859,9 @@ const uskudar = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    ماجستير مع أطروحة{" "}
+                    {t("ماجستير مع أطروحة")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عامان دراسي)
+                      {t("مدة الدراسة عامان دراسي")}
                     </b>
                   </h2>
 
@@ -11055,39 +10936,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Criminal Justice-العدالة الجنائية
+                            {t("العدالة الجنائية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11147,231 +11028,45 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              5095$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              3870$
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              3870$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5095$
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5095$
                             </p>
                           </div>
                         </div>
                       </blockquote>
-
                       <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                         <div className="flex items-center gap-4">
                           <Image
@@ -11425,39 +11120,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11517,39 +11212,132 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nutrition And Dietetics -التغذية والحمية
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5095$
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              5095$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("اسكودار")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("التمريض")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11609,40 +11397,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("التغذية والحمية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11702,39 +11489,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Chemical Engineering - الهندسة الكيميائية
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11794,40 +11581,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Artificial Intelligence Engineering - هندسة الذكاء
-                            الاصطناعي
+                            {t("الهندسة الكيميائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11887,39 +11673,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("هندسة الذكاء الاصطناعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -11979,40 +11765,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12072,40 +11857,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12165,39 +11949,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Work-العمل الاجتماعي
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12257,39 +12041,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Bioengineering - الهندسة الحيوية
+                            {t("العمل الاجتماعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12349,39 +12133,131 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Bioengineering - الهندسة الحيوية
+                            {t("الهندسة الحيوية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              3870$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("اسكودار")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الهندسة الحيوية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              3870$
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12442,40 +12318,40 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Forensic Science-العلوم الجنائية
+                            {t("العلوم الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4365$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4365$
                             </p>
@@ -12535,39 +12411,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12627,39 +12503,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Clinical Psychology-علم النفس السريري
+                            {t("علم النفس السريري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               13750$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               13750$
                             </p>
@@ -12719,39 +12595,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Family Councelling-الإرشاد النفسي العائلي
+                            {t("الإرشاد النفسي العائلي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12811,39 +12687,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuroscience-علم الأعصاب
+                            {t("علم الأعصاب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12903,39 +12779,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuroscience-علم الأعصاب
+                            {t("علم الأعصاب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -12995,39 +12871,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cyber Security -الأمن المعلوماتي و السيبراني
+                            {t("امن المعلومات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13087,39 +12963,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cyber Security -الأمن المعلوماتي و السيبراني
+                            {t("امن المعلومات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13179,39 +13055,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الادارة الهندسية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13271,39 +13147,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الادارة الهندسية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13363,39 +13239,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Applied Psychology-علم النفس التطبيقي
+                            {t("علم النفس التطبيقي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5655$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5372$
                             </p>
@@ -13455,40 +13331,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Media And Cultural Studies-الإعلام و الدراسات
-                            الثقافية
+                            {t("الإعلام والدراسات الثقافية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13548,40 +13423,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing And Forensic Midwifery-التمريض و القبالة
-                            الجنائية
+                            {t("التمريض والقبالة الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13642,39 +13516,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Biotechnology-التكنولوجيا البيولوجية
+                            {t("التكنولوجيا البيولوجية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13734,40 +13608,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Addiction Consulting And Rehabilitation-إستشارات
-                            الإدمان و إعادة التأهيل
+                            {t("إستشارات الإدمان وإعادة التأهيل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13827,39 +13700,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Journalism-الإعلام الجديد و الصحافة
+                            {t("الإعلام الجديد و الصحافة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -13919,39 +13792,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuromarketing-التسويق الفكري
+                            {t("التسويق الفكري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -14011,39 +13884,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sufi Culture And Literature-الثقافة الصوفية و آدابها
+                            {t("الثقافة الصوفية و آدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               4075$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4075$
                             </p>
@@ -14103,39 +13976,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology-البيولوجيا الجزيئية
+                            {t("البيولوجيا الجزيئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -14195,39 +14068,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Molecular Biology-البيولوجيا الجزيئية
+                            {t("البيولوجيا الجزيئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3870$
                             </p>
@@ -14242,9 +14115,9 @@ const uskudar = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    دكتوراه{" "}
+                    {t("دكتوراه")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة 4اعوام دراسية)
+                      {t("مدة الدراسة 4 أعوام دراسية")}
                     </b>
                   </h2>
 
@@ -14320,39 +14193,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Relations - العلاقات الدولية
+                            {t("العلاقات الدولية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -14412,39 +14285,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Psychology - علم النفس
+                            {t("علم النفس")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               17315$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               17315$
                             </p>
@@ -14504,39 +14377,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("التمريض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </p>
@@ -14596,39 +14469,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Speech And Language Therapy - علاج النطق واللغة
+                            {t("علاج النطق واللغة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </p>
@@ -14688,39 +14561,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -14780,40 +14653,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -14873,40 +14745,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Communication - وسائل الإعلام
-                            والاتصالات الجديدة
+                            {t("وسائل الإعلام والاتصالات الجديدة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -14966,40 +14837,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -15059,39 +14929,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Forensic Science-العلوم الجنائية
+                            {t("العلوم الجنائية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>
@@ -15151,39 +15021,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Neuroscience-علم الأعصاب
+                            {t("علم الأعصاب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8095$
                             </p>
@@ -15243,39 +15113,39 @@ const uskudar = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              اسكودار{" "}
+                              {t("اسكودار")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Islamic Civilization - الحضارة الاسلامية
+                            {t("الحضارة الإسلامية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               7030$
                             </p>

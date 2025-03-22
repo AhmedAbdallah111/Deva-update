@@ -7,21 +7,31 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import hadf from "../../Public/images/WhatsApp Image 2024-12-31 at 12.40.13 AM.jpeg";
 import cov from "../../Public/images/كافر-الموقع-.jpg-8.jpg";
-import shapeAnimation from "../../Public/Animation/Animation - shape95.json";
 import emailjs from "@emailjs/browser";
-import serch from "../../Public/images/موقع6.jpg";
+import serch from "../../Public/images/man-search.jpg";
 import { useEffect, useRef } from "react";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 import { FaSchool } from "react-icons/fa";
 import { BiSolidSchool } from "react-icons/bi";
-import { FaBuildingFlag } from "react-icons/fa6";
 import { MdLocalLibrary } from "react-icons/md";
-import { IoMdSchool } from "react-icons/io";
-import { GoTriangleRight, GoTriangleLeft } from "react-icons/go";
-import logo from "../../Public/images/logo.jpg";
+import macq from "../../Public/images/macqq.jpg";
+import logo from "../../Public/images/logo-png.png";
 import { useTranslation } from "react-i18next";
-import clsx from "clsx";
+import meet from "../../Public/images/meet.jpg";
+import {
+  FaGraduationCap,
+  FaGlobe,
+  FaUserTie,
+  FaBookOpen,
+  FaRecycle,
+  FaHeart,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaUserCircle } from "react-icons/fa";
+import { FaHandHoldingDollar } from "react-icons/fa6";
+import { GiLaptop, GiPlanetConquest } from "react-icons/gi";
+
 const images = {
   ar: {
     cover: cov,
@@ -29,25 +39,21 @@ const images = {
   },
   en: {
     cover: "/images/kon-en.jpg",
-    hadf: "/images/hadf-en.jpg",
   },
   fr: {
     cover: "/images/kon-fr.jpg",
-    hadf: "/images/hadf-fr.jpg",
   },
   fa: {
     cover: "/images/kon-fa.jpg",
-    hadf: "/images/hadf-fa.jpg",
   },
   tr: {
     cover: "/images/kon-tr.jpg",
-    hadf: "/images/hadf-tr.jpg",
   },
   ru: {
     cover: "/images/kon-ru.jpg",
-    hadf: "/images/hadf-ru.jpg",
   },
 };
+
 const getImage = (lang, type) => {
   return images[lang]?.[type] || defaultImages[type];
 };
@@ -170,7 +176,7 @@ const KonWakelna = () => {
         console.error("Error:", error);
       });
   };
-  const milestones = [
+  const symptoms = [
     t(
       "التحلي بالشفافية والوضوح في التعامل، مع الالتزام بالمعايير الأخلاقية والمهنية"
     ),
@@ -180,6 +186,46 @@ const KonWakelna = () => {
       "شركات وأفراد لديهم حس عالٍ بالمسؤولية ويؤمنون بأهمية العمل الخدمي الطلابي."
     ),
     t("المساهمة في تحقيق أهداف النمو والتوسع."),
+  ];
+  const tips = [
+    { title: t("عمولات تنافسية ومكافآت مغرية"), icon: FaHandHoldingDollar },
+    { title: t("سوق تعليمي متنامٍ وفرص غير محدودة"), icon: FaGlobe },
+    { title: t("دعم تسويقي شامل"), icon: FaUserTie },
+    { title: t("شراكة طويلة الأمد وثقة متبادلة"), icon: FaRecycle },
+    {
+      title: t("وصول مباشر إلى أفضل الجامعات في تركيا"),
+      icon: GiPlanetConquest,
+    },
+    { title: t("نظام متابعة إلكتروني متطور"), icon: GiLaptop },
+  ];
+
+  const testimonials = [
+    {
+      name: t("مكاتب الخدمات العامة"),
+      text: t("مؤسسات تقدم مجموعة واسعة من الخدمات للأفراد والشركات"),
+      icon: <MdLocalLibrary className="w-12 h-12 text-[#e67297]" />,
+    },
+    {
+      name: t("معاهد اللغات والتدريب"),
+      text: t(
+        "عاهد اللغات والتدريب لا تقتصر فقط على الدروس التقليدية، بل توفر أنشطة تفاعلية لتعزيز التعلم وجعل التجربة أكثر متعة وكفاءة"
+      ),
+      icon: <FaSchool className="w-20 h-12 text-[#e67297]" />,
+    },
+    {
+      name: t("مستشارين اكادمين متميزين"),
+      text: t(
+        "احصل على التوجيه المثالي لمسارك التعليمي. نساعدك على اتخاذ قرارات صائبة تعزز فرص نجاحك الأكاديمي والمهني"
+      ),
+      icon: <FaUserCircle className="w-16 h-12 text-[#e67297]" />,
+    },
+    {
+      name: t("شركات الخدمات الطلابية"),
+      text: t(
+        "مؤسسات متخصصة في تقديم الدعم والمساعدة للطلاب محليًا ودوليًا، بهدف تسهيل رحلتهم التعليمية "
+      ),
+      icon: <BiSolidSchool className="w-16 h-12 text-[#e67297]" />,
+    },
   ];
   return (
     <>
@@ -191,197 +237,145 @@ const KonWakelna = () => {
           height={200}
         />
       </div>
-      <div className="flex max-sm:w-[80rem] justify-between max-lg:w-[79rem] items-center bg-gradient-to-r from-pink-100 to-white rounded-lg p-8 border-t mt-1 border-dashed border-fuchsia-900">
-        <div className="relative w-2/3 flex  items-center mt-12">
-          <Image
-            src={getImage(currentLang, "hadf")}
-            alt="Student"
-            className="w-[35rem] h-68 rounded-l-full object-cover"
-            width={200}
-            height={160}
-          />
-        </div>
-        <div className="max-w-md mt-12 ">
-          <h1 className="text-5xl font-bold text-gray-900">
-            {t("ماهي")}
-            <span className="text-yellow-500">{t(" أهدافنا ؟")}</span>
-          </h1>
-          <p
-            className={clsx(
-              "mt-12 text-white bg-fuchsia-950 font-bold leading-relaxed px-4 py-2 rounded-r-full",
-              i18n.language === "ar" ? "text-2xl" : "text-lg"
-            )}
-          >
-            {" "}
-            {t("تمكين الطلاب أكاديميًا وثقافيًا")}
-          </p>
-          <p
-            className={clsx(
-              "mt-12 text-white bg-fuchsia-950 font-bold leading-relaxed px-4 py-2 rounded-r-full",
-              i18n.language === "ar"
-                ? "text-2xl"
-                : i18n.language === "tr"
-                ? "text-lg py-6"
-                : "text-lg"
-            )}
-          >
-            {" "}
-            {t("تأسيس اكبر هوية تعليمية عالمية")}
-          </p>
-          <p
-            className={clsx(
-              "mt-12 text-white bg-fuchsia-950 font-bold leading-relaxed px-4 py-2 rounded-r-full",
-              i18n.language === "ar" ? "text-2xl" : "text-lg"
-            )}
-          >
-            {" "}
-            {t("دعم تطوير المهارات الشخصية والقيادية")}
-          </p>
-          <p
-            className={clsx(
-              "mt-12 text-white bg-fuchsia-950 font-bold leading-relaxed px-4 py-2 rounded-r-full",
-              i18n.language === "ar" ? "text-2xl" : "text-lg"
-            )}
-          >
-            {" "}
-            {t("المساهمة في بناء مجتمع معرفي")}
-          </p>
-          <p
-            className={clsx(
-              "mt-12 text-white bg-fuchsia-950 font-bold leading-relaxed px-4 py-2 rounded-r-full",
-              i18n.language === "ar" ? "text-2xl" : i18n.language === "fr",
-              "tr" ? "py-6 text-xl" : "text-xl"
-            )}
-          >
-            {" "}
-            {t("الاستدامة والمسؤولية المجتمعية")}
-          </p>
+      <div className="absolute  left-0 w-full h-1/3 bg-[#7a0066c0] clip-path-top">
+        <Image
+          className="mx-auto mt-8"
+          src={logo}
+          alt="logo"
+          width={200}
+          height={40}
+          loading="lazy"
+        />
+      </div>
+      <div className="min-h-screen mt-60 flex justify-center bg-[#fff1f157] p-6">
+        <div className="max-w-5xl w-full text-center">
+          <div className="flex flex-col items-center mb-6">
+            <h1 className="text-3xl font-bold text-center mb-6 text-[#7a0066c6] w-fit py-4 px-6 rounded-tl-2xl border border-r-red-900 border-l-red-900 border-b-fuchsia-700 border-t-fuchsia-700 rounded-br-2xl bg-[#eed1e8] mx-auto">
+              {t("ماهي")}
+              <span className="text-yellow-600"> {t("أهدافنا ؟")}</span>
+            </h1>
+          </div>
+
+          {/* الشبكة الخاصة بالكروت */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {tips.map((tip, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full h-full p-8 rounded-2xl flex flex-col items-center justify-center shadow-xl shadow-black bg-gradient-to-r from-[#7a0066] via-[#ff9fbd] to-[#7a0066]"
+              >
+                <tip.icon className="text-6xl mb-4 text-white" />
+                <p className="text-2xl font-semibold text-center text-white">
+                  {tip.title}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
-      <section className="bg-white mt-12 mb-16 max-sm:w-[75rem] max-lg:w-[75rem] max-lg:mr-16">
-        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <div className="mt-12">
-            <div className="bg-fuchsia-900 w-[34.5rem] rounded-r-full h-72 z-40 absolute left-0 max-sm:right-[45rem]  max-lg:right-[45rem]  ">
-              <Image src={logo} className="mx-auto w-20" />
-              <h1 className="font-bold text-2xl m-9 mt-12 text-center leading-snug">
-                {t(
-                  "الاّن يمكنك تحقيق اداء مميز والانتشار في الأنشطة والمجالات  الطلابية مع Deva"
-                )}
-              </h1>
-            </div>
-            <div ref={sliderRef} id="keen-slider" className="keen-slider">
-              <div className="keen-slider__slide opacity-40 transition-opacity duration-500 mt-16">
-                <blockquote className="rounded-lg bg-fuchsia-50 px-6 py-10 shadow-sm sm:p-8 max-sm:w-[49rem] max-sm:mr-36 max-lg:ml-0">
-                  <b className="font-bold text-black flex justify-center">
-                    <MdLocalLibrary className="size-28 text-purple-700" />
-                  </b>
-                  <p className="mt-4 text-gray-700 text-center text-2xl font-bold">
-                    {t("مكاتب الخدمات العامة")}
-                  </p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide opacity-40 transition-opacity duration-500 mt-16">
-                <blockquote className="rounded-3xl bg-fuchsia-100 px-6 py-10 shadow-sm sm:p-8 max-sm:w-[49rem] max-sm:mr-36  max-lg:ml-0">
-                  <b className="font-bold text-black flex justify-center">
-                    <FaSchool className="size-28 text-purple-700" />
-                  </b>
-                  <p className="mt-4 text-gray-700 text-2xl font-bold text-center ">
-                    {t("معاهد اللغات والتدريب")}
-                  </p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide opacity-40 transition-opacity duration-500 mt-16">
-                <blockquote className="rounded-3xl bg-fuchsia-100 px-6 py-10 shadow-sm sm:p-8 max-sm:w-[49rem] max-sm:mr-36  max-lg:ml-0">
-                  <b className="font-bold text-black flex justify-center">
-                    <BiSolidSchool className="size-28 text-purple-700" />
-                  </b>
-                  <p className="mt-4 text-gray-700 text-2xl text-center font-bold">
-                    {t("شركات الخدمات الطلابية")}
-                  </p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide opacity-40 transition-opacity duration-500 mt-16">
-                <blockquote className="rounded-lg bg-fuchsia-50 px-6 py-10 shadow-sm sm:p-8 max-sm:w-[49rem] max-sm:mr-36  max-lg:ml-2">
-                  <b className="font-bold text-black flex justify-center">
-                    <FaBuildingFlag className="size-28 text-purple-700" />
-                  </b>
-                  <p className="mt-4 text-gray-700 text-2xl text-center font-bold">
-                    {t("وكالات السياحة والسفر")}
-                  </p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide opacity-40 transition-opacity duration-500 mt-16 ">
-                <blockquote className="rounded-lg bg-fuchsia-50 px-6 py-10 shadow-sm sm:p-8 max-sm:w-[49rem] max-sm:mr-36  max-lg:ml-2">
-                  <b className="font-bold text-black flex justify-center">
-                    <IoMdSchool className="size-28 text-purple-700" />
-                  </b>
-                  <p className="mt-4 text-center text-2xl text-gray-700 font-bold">
-                    {t("مستشارين اكادمين متميزين")}
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-            <div className=" flex justify-center items-center mt-4">
-              <button
-                className="text-gray-600 hover:text-gray-900 transition ml-5"
-                onClick={() => keenSliderRef.current?.prev()}
+      <div className="relative w-full h-[30px] z-10 bg-[#6a1d1d57]">
+        <div className="absolute right-0 top-0 w-full h-full bg-[length:50px_50px] bg-gradient-to-br from-transparent via-white to-transparent"></div>
+      </div>
+      <div className="bg-[#fff] flex justify-center items-center py-32 mt-20 px-6">
+        <div className="max-w-5xl w-full grid md:grid-cols-2 gap-20 items-center">
+          <div>
+            <Image src={macq} className="h-32 w-32 mr-32 bg-gray-50" />
+            <p className="text-gray-600 text-3xl text-center pl-1 ml-20 font-semibold mt-4">
+              {t(
+                "الاّن يمكنك تحقيق اداء مميز والانتشار في الأنشطة والمجالات الطلابية مع Deva"
+              )}
+            </p>
+          </div>
+          <div className="space-y-4 relative">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className={`bg-white p-4 rounded-lg  cursor-pointer shadow-2xl flex items-center space-x-4 ${
+                  index === 0 || 1
+                    ? "scale-105  shadow-3xl border-x-4 border-[#7a0066a2]"
+                    : ""
+                }`}
               >
-                <GoTriangleRight className="size-12 rounded-full mx-auto " />
-              </button>
-              <span className="text-sm text-gray-600">
-                <span
-                  className="text-2xl text-fuchsia-900 font-bold"
-                  ref={keenSliderActiveRef}
-                >
-                  1
-                </span>{" "}
-                <b className="text-2xl text-violet-600 font-bold px-1">/</b>
-                <span
-                  className="text-fuchsia-900 font-bold text-2xl"
-                  ref={keenSliderCountRef}
-                >
-                  2
-                </span>
-              </span>
-              <button
-                className="text-gray-600 hover:text-gray-900 transition mr-5"
-                onClick={() => keenSliderRef.current?.next()}
-              >
-                <GoTriangleLeft className="size-12 rounded-full mx-auto  " />
-              </button>
+                {testimonial.icon}
+                <div>
+                  <h4 className="font-bold pr-3 text-gray-900">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-gray-500 pr-3 text-sm font-bold">
+                    {testimonial.text}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="relative w-full h-[30px] z-10 bg-[#6a1d1d57]">
+        <div className="absolute right-0 top-0 w-full h-full bg-[length:50px_50px] bg-gradient-to-br from-transparent via-white to-transparent"></div>
+      </div>
+      <div className="flex justify-center mt-16 items-center text-center h-16 text-5xl  text-fuchsia-950 font-bold max-sm:w-[79rem]">
+        <h1 className="text-3xl font-bold flex text-center mb-6 text-[#7a0066c6] w-fit py-4  px-6 rounded-tl-2xl border border-r-red-900 border-l-red-900 border-b-fuchsia-700 border-t-fuchsia-700 rounded-br-2xl  bg-[#eed1e8] mx-auto">
+          {t("عن من نبحث")}{" "}
+          <p className="text-yellow-500">{t("من الوكلاء؟")} </p>{" "}
+        </h1>
+      </div>
+      <div className="min-h-screen bg-[#fff1f157] flex items-center justify-center p-6">
+        <div className="relative max-w-5xl w-full rounded-2xl">
+          <div className="relative flex items-center px-6 gap-20 justify-center">
+            <div className="w-80 h-60 bg-gradient-to-r from-[#7a0066] via-[#ff9fbd] to-[#7a0066] rounded-full flex items-center justify-center shadow-md">
+              <Image
+                src={serch}
+                alt="المرأة المتألمة"
+                className="w-72 h-60 object-cover animate-pulse rounded-full"
+              />
+            </div>
+            <div className="absolute w-full h-full flex justify-around gap-20">
+              <div className="flex flex-col -mt-20 items-center gap-32">
+                {symptoms.slice(0, 2).map((symptom, index) => (
+                  <div
+                    key={index}
+                    className="w-56 py-2 text-center text-white shadow-2xl px-10 bg-[#ee6892d4] rounded-full shadow-black"
+                  >
+                    {index + 1}. {symptom}
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col items-center gap-12">
+                {symptoms.slice(2, 3).map((symptom, index) => (
+                  <div
+                    key={index}
+                    className="w-56 py-2 mt-[19rem] text-center text-white shadow-2xl px-10 bg-[#ee6892d4] rounded-full shadow-black"
+                  >
+                    {3}. {symptom}
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col items-center -mt-20 gap-32">
+                {symptoms.slice(3).map((symptom, index) => (
+                  <div
+                    key={index}
+                    className="w-56 py-2 text-center  text-white shadow-2xl px-10 bg-[#ee6892d4] rounded-full shadow-black"
+                  >
+                    {4 + index}. {symptom}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <div className="flex justify-center items-center text-center h-16 text-5xl mt-4 text-fuchsia-950 font-bold max-sm:w-[79rem]">
-        {" "}
-        {t("عن من نبحث")} <p className="text-yellow-300">{t("من الوكلاء؟")} </p>{" "}
       </div>
-      <div className="flex justify-between bg-white max-sm:w-[79rem] max-lg:w-[79rem]">
-        <div className="flex flex-col items-start space-y-6 p-8 bg-white">
-          {milestones.map((milestone, index) => (
-            <div key={index} className="flex items-center">
-              <div className="w-6 h-6 bg-purple-800 rounded-r-full flex items-center justify-center text-white">
-                ✔
-              </div>
-              {index < milestones.length - 1 && (
-                <div className="h-16 w-1 bg-gray-800"></div>
-              )}
-              <div
-                className={`ml-4 p-3 py-5 bg-fuchsia-900 text-white border rounded-l-lg  shadow`}
-              >
-                {milestone}
-              </div>
-            </div>
-          ))}
-        </div>
-        <Image
-          src={serch}
-          className="h-[75vh] w-[30rem] max-sm:h-[50vh] max-lg:h-[50vh]"
-        />
+      <div className="relative w-full h-[30px] z-10 bg-[#6a1d1d57]">
+        <div className="absolute right-0 top-0 w-full h-full bg-[length:50px_50px] bg-gradient-to-br from-transparent via-white to-transparent"></div>
       </div>
-      <div className="min-h-screen flex items-center max-lg:w-[79rem] justify-between bg-gradient-to-r from-pink-100 to-white p-6 border-dashed border rounded-lg border-stone-600 max-sm:w-[79rem]">
-        <form className="bg-white p-8 rounded-lg shadow-lg w-[50%] space-y-6">
+
+      <div className="min-h-screen flex my-20 items-center max-lg:w-[79rem] justify-between p-6 py-12  rounded-lg max-sm:w-[79rem]">
+        <form className="bg-white p-8 rounded-r-lg shadow-2xl w-[50%] space-y-6">
           <h2 className="text-2xl font-bold text-right mb-4">
             {t("معلومات الشركة")}
           </h2>
@@ -470,15 +464,22 @@ const KonWakelna = () => {
           <button
             type="submit"
             value={sendEmail}
-            className="w-full bg-purple-800 text-white p-3 rounded-lg hover:bg-purple-600 transition"
+            className="w-full bg-[#7a0066c0] text-white p-3 rounded-lg hover:bg-[#7a0066fa] transition"
           >
             {t("إرسال الآن")}
           </button>
 
           {/* رابط تسجيل الدخول */}
         </form>
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Lottie className="w-[35rem]" animationData={shapeAnimation} />
+        <div className="w-full md:w-1/2 flex justify-center shadow-2xl">
+          <div className="relative w-full h-full">
+            <Image
+              src={meet}
+              alt="Background"
+              className="w-full h-[82vh] object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 bg-[#e789a7] bg-opacity-70 rounded-l-2xl"></div>
+          </div>{" "}
         </div>
       </div>
     </>

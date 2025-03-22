@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import cover from "../../Public/images/Gelisim-1.jpg";
 import logo from "../../Public/images/Gelisim.jpg";
@@ -6,8 +7,11 @@ import altsss from "../../Public/images/gl1.jpg";
 import altn from "../../Public/images/gl2.jpg";
 import alt from "../../Public/images/gl4.jpg";
 import awrak from "../../Public/images/awark.jpg";
+import { useTranslation } from "react-i18next";
 
 const gelisim = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language || "ar";
   return (
     <>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-10  -mt-0 pt-24 max-lg:w-[75rem] max-lg:mr-6">
@@ -23,7 +27,7 @@ const gelisim = () => {
 
           <div className="flex text-center items-center justify-center">
             <h1 className="text-red-600 font-bold text-4xl mt-2 mb-1">
-              جامعة جليشم في تركيا
+              {t("جامعة جيليشيم في تركيا")}
             </h1>
           </div>
           <div className="text-center flex justify-center items-center my-4">
@@ -34,7 +38,7 @@ const gelisim = () => {
             >
               <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
             </svg>
-            <h4 className="font-bold text-gray-800 text-xl">اسطنبول</h4>
+            <h4 className="font-bold text-gray-800 text-xl">{t("اسطنبول")}</h4>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -46,7 +50,7 @@ const gelisim = () => {
               href="https://www.gelisim.edu.tr"
               className="font-bold text-gray-800 text-xl pr-1"
             >
-              الموقع الرسمي للجامعة
+              {t("الموقع الرسمي للجامعة")}
             </a>
           </div>
         </div>
@@ -59,7 +63,7 @@ const gelisim = () => {
 
           <div className="flex justify-evenly my-4">
             <h1 className="font-bold text-3xl text-yellow-500 max-sm:text-5xl">
-              ISTANBUL GELSIM UNIVERSITY
+              {t("جامعة جيليشيم")}
             </h1>
           </div>
           <hr />
@@ -72,7 +76,7 @@ const gelisim = () => {
               <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z" />
             </svg>
             <h1 className="font-bold text-gray-900 text-2xl pr-4 mt-2 max-sm:text-3xl">
-              التصنيف العالمي:{" "}
+              {t("التصنيف العالمي:")}
               <b className="text-xl text-gray-500 max-sm:text-3xl">2742</b>
             </h1>
           </div>
@@ -86,7 +90,7 @@ const gelisim = () => {
               <path d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185l0-121c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32l0 36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1l32 0 0 69.7c-.1 .9-.1 1.8-.1 2.8l0 112c0 22.1 17.9 40 40 40l16 0c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2l31.9 0 24 0c22.1 0 40-17.9 40-40l0-24 0-64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 64 0 24c0 22.1 17.9 40 40 40l24 0 32.5 0c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1l16 0c22.1 0 40-17.9 40-40l0-16.2c.3-2.6 .5-5.3 .5-8.1l-.7-160.2 32 0z" />
             </svg>
             <h1 className="font-bold text-gray-900 text-2xl pr-4 mt-2 max-sm:text-3xl">
-              التصنيف المحلي:{" "}
+              {t("التصنيف المحلي:")}
               <b className="text-xl text-gray-500 max-sm:text-3xl">62</b>
             </h1>
           </div>
@@ -100,7 +104,7 @@ const gelisim = () => {
               <path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
             </svg>
             <h1 className="font-bold text-gray-900 text-2xl pr-4 mt-2 max-sm:text-3xl">
-              عدد البرامج الدراسية :{" "}
+              {t("عدد البرامج الدراسية :")}
               <b className="text-xl text-gray-500 max-sm:text-3xl">57</b>
             </h1>
           </div>
@@ -114,7 +118,7 @@ const gelisim = () => {
               <path d="M192 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm51.3 182.7L224.2 307l49.7 49.7c9 9 14.1 21.2 14.1 33.9l0 89.4c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7-73.9-73.9c-15.8-15.8-22.2-38.6-16.9-60.3l20.4-84c8.3-34.1 42.7-54.9 76.7-46.4c19 4.8 35.6 16.4 46.4 32.7L305.1 208l30.9 0 0-24c0-13.3 10.7-24 24-24s24 10.7 24 24l0 55.8c0 .1 0 .2 0 .2s0 .2 0 .2L384 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-216-39.4 0c-16 0-31-8-39.9-21.4l-13.3-20zM81.1 471.9L117.3 334c3 4.2 6.4 8.2 10.1 11.9l41.9 41.9L142.9 488.1c-4.5 17.1-22 27.3-39.1 22.8s-27.3-22-22.8-39.1zm55.5-346L101.4 266.5c-3 12.1-14.9 19.9-27.2 17.9l-47.9-8c-14-2.3-22.9-16.3-19.2-30L31.9 155c9.5-34.8 41.1-59 77.2-59l4.2 0c15.6 0 27.1 14.7 23.3 29.8z" />
             </svg>
             <h1 className="font-bold text-gray-900 text-2xl pr-4 mt-2 max-sm:text-3xl">
-              عدد الطلاب :{" "}
+              {t("عدد الطلاب :")}
               <b className="text-xl text-gray-500 max-sm:text-3xl">25,100</b>
             </h1>
           </div>
@@ -128,53 +132,58 @@ const gelisim = () => {
               <path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z" />
             </svg>
             <h1 className="font-bold text-gray-900 text-2xl pr-4 mt-2 max-sm:text-3xl">
-              عدد الطلاب الاجانب:{" "}
+              {t("عدد الطلاب الاجانب:")}
               <b className="text-xl text-gray-500 max-sm:text-3xl">4080</b>
             </h1>
           </div>
         </div>
       </div>
       <div className="grid bg-gradient-to-r from-violet-50 h-auto w-[96%] mr-[2%] to-fuchsia-50 rounded-lg mt-9 max-sm:w-[75rem] max-sm:mr-6 max-lg:w-[75rem]">
-        <div className="mr-5 bg-fuchsia-900 w-[30rem] mt-5 h-14 rounded-tr-lg rounded-bl-lg">
+        <div className="mr-5 bg-fuchsia-900 w-fit px-6 mt-5 h-14 rounded-tr-lg rounded-bl-lg">
           <h1 className="font-bold text-3xl text-yellow-500 pr-2 pl-4 py-2">
-            معلومات عامة عن جامعة جليشم
+            {t("معلومات عامة عن جامعة جليشم")}
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           <div className=" rounded-l lg:col-span-2">
             <div className=" mr-5 mt-8  ">
               <h1 className="font-bold text-2xl text-fuchsia-950 ">
-                تاريخ التأسيس
+                {t("تاريخ التأسيس")}
               </h1>
             </div>
 
             <p className="text-gray-700 font-medium text-xl py-4 mr-5">
-              جامعة جليشيم (İstanbul Gelişim Üniversitesi) هي جامعة خاصة تقع في
-              مدينة إسطنبول، تركيا. تأسست الجامعة عام 2008 وتهدف إلى تقديم تعليم
-              عالي الجودة مع التركيز على إعداد الطلاب ليكونوا جاهزين لسوق العمل
-              في مختلف التخصصات.
+              {t(
+                "جامعة جليشيم هي جامعة خاصة تقع في مدينة إسطنبول، تركيا. تأسست الجامعة عام 2008 وتهدف إلى تقديم تعليم عالي الجودة مع التركيز على إعداد الطلاب ليكونوا جاهزين لسوق العمل في مختلف التخصصات."
+              )}
             </p>
             <h1 className="font-bold text-2xl text-fuchsia-950 mr-5">
-              أحرمها الجامعية
+              {t("أحرمها الجامعية")}
             </h1>
             <p className="text-gray-700 font-medium text-xl py-4 mr-5">
               <hr className="my-2" />
               <br className="" />
-              الحرَم الجامعي لجامعة جليشيم التركية يتميز ببنية تحتية حديثة
-              ومرافق متطورة، حيث تسعى الجامعة إلى توفير بيئة تعليمية مريحة
-              ومحفزة للطلاب. فيما يلي أهم المرافق والخدمات التي يقدمها الحرم
-              الجامعي:
+              {t(
+                "الحرَم الجامعي لجامعة جليشيم التركية يتميز ببنية تحتية حديثة ومرافق متطورة، حيث تسعى الجامعة إلى توفير بيئة تعليمية مريحة ومحفزة للطلاب. فيما يلي أهم المرافق والخدمات التي يقدمها الحرم الجامعي:"
+              )}
+
               <br />
               <hr className="my-2" />
               <br />
-              قاعات دراسية مجهزة بأحدث التقنيات\ورش عمل ومختبرات تصميم مخصصة
-              للطلاب في تخصصات الفنون الجميلة والهندسة
+              {t(
+                "قاعات دراسية مجهزة بأحدث التقنيات وورش عمل ومختبرات تصميم مخصصة للطلاب في تخصصات الفنون الجميلة والهندسة"
+              )}
+
               <br />
               <hr className="my-2" />
-              مكتبة مركزية تضم آلاف الكتب والمراجع الأكاديمية باللغتين التركية
-              والإنجليزية
+              {t(
+                "مكتبة مركزية تضم آلاف الكتب والمراجع الأكاديمية باللغتين التركية والاانجليزية"
+              )}
+
               <hr className="my-2" />
-              نوادٍ طلابية متنوعة تهدف إلى تطوير مهارات الطلاب الشخصية والمهنية
+              {t(
+                "نوادٍ طلابية متنوعة تهدف إلى تطوير مهارات الطلاب الشخصية والمهنية"
+              )}
               <br />
             </p>
           </div>
@@ -192,7 +201,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  لغات التدريس في جامعة جليشم؟
+                  {t("لغات التدريس في جامعة جليشيم؟")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -212,8 +221,9 @@ const gelisim = () => {
               </summary>
 
               <p className="mt-4 leading-relaxed text-xl font-bold text-gray-700">
-                اللغات المعتمدة في جامعة جليشم الإنكليزية أو التركية ويحدد ذلك
-                بناءً على التخصص المطلوب واختيار الطالب.
+                {t(
+                  "اللغات المعتمدة في جامعة جليشيم هي الإنجليزية أو التركية، ويحدد ذلك بناءً على التخصص المطلوب واختيار الطالب"
+                )}
               </p>
               <Image src={altsss} className="mt-5" />
             </details>
@@ -223,7 +233,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  اعترافات جامعة جليشم
+                  {t("اعترافات جامعة جليشيم")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -242,23 +252,22 @@ const gelisim = () => {
                 </span>
               </summary>
               <h1 className="font-bold text-xl text-gray-800">
-                جامعة إسطنبول جليشيم تتمتع بعدة اعتمادات أكاديمية دولية، مما
-                يعزز مكانتها كواحدة من الجامعات الرائدة في تركيا. هذه الاعتمادات
-                تضيف مصداقية لبرامجها التعليمية وتزيد من فرص خريجيها في الحصول
-                على وظائف أو متابعة دراساتهم في جامعات عالمية.
+                {t(
+                  "جامعة إسطنبول جليشيم تتمتع بعدة اعتمادات أكاديمية دولية، مما يعزز مكانتها كواحدة من الجامعات الرائدة في تركيا. هذه الاعتمادات تضيف مصداقية لبرامجها التعليمية وتزيد من فرص خريجيها في الحصول على وظائف أو متابعة دراساتهم في جامعات عالمية."
+                )}
               </h1>
               <p className="mt-4 leading-relaxed text-xl font-bold text-gray-700">
-                إعترف مجلس التعليم العالي التركي الـ YÖK.
+                {t(" إعترف مجلس التعليم العالي التركي الـ YÖK")}
+
                 <br />
-                اعتمادات ABET (Accreditation Board for Engineering and
-                Technology):
+                {t(
+                  "حصلت الجامعة على هذا الاعتماد لبعض برامج الهندسة، مما يعترف بجودة تعليمها في مجالات الهندسة والتكنولوجيا."
+                )}
+
                 <br />
-                حصلت الجامعة على هذا الاعتماد لبعض برامج الهندسة، مما يعترف
-                بجودة تعليمها في مجالات الهندسة والتكنولوجيا.
-                <br />
-                اعتمادات AHPGS (Accreditation Agency for Study Programs in
-                Health and Social Science):تغطي برامج العلوم الصحية والاجتماعية،
-                مما يضمن أن المناهج تتوافق مع المعايير الأوروبية.
+                {t(
+                  "اعتمادات: تغطي برامج العلوم الصحية والاجتماعية، مما يضمن أن المناهج تتوافق مع المعايير الأوروبية."
+                )}
               </p>
             </details>
             <details
@@ -267,7 +276,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  السكن الطلابي في الجامعة
+                  {t("السكن الطلابي في الجامعة")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -287,12 +296,12 @@ const gelisim = () => {
               </summary>
 
               <p className="mt-4 leading-relaxed text-xl font-bold text-gray-700">
-                لسكن الطلابي في جامعة إسطنبول جليشيم يوفر خيارات متعددة ومريحة
-                تلبي احتياجات الطلاب المحليين والدوليين. يتميز السكن بالقرب من
-                الحرم الجامعي والخدمات المتوفرة لجعل تجربة السكن آمنة ومريحة
-                ومناسبة للدراسة.
+                {t(
+                  "السكن الطلابي في جامعة إسطنبول جليشيم يوفر خيارات متعددة ومريحة تلبي احتياجات الطلاب المحليين والدوليين. يتميز السكن بالقرب من الحرم الجامعي والخدمات المتوفرة لجعل تجربة السكن آمنة ومريحة ومناسبة للدراسة."
+                )}
+
                 <br />
-                يدار مباشرة من قبل الجامعة أو بالتعاون مع شركاء متخصصين
+                {t("يدار مباشرة من قبل الجامعة أو بالتعاون مع شركاء متخصصين")}
               </p>
               <Image src={alt} className="mt-5" />
             </details>
@@ -302,7 +311,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  الحياة الطلابية
+                  {t("الحياة الطلابية")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -322,32 +331,30 @@ const gelisim = () => {
               </summary>
 
               <p className="mt-4 leading-relaxed text-xl font-bold text-gray-700">
-                الحياة الطلابية في جامعة إسطنبول جليشيم تتميز بتنوع الأنشطة
-                والفرص التي تتيح للطلاب تجربة أكاديمية وشخصية غنية. بالإضافة إلى
-                البرامج التعليمية المتميزة، تسعى الجامعة إلى توفير بيئة تعليمية
-                تشجع على النمو الاجتماعي والثقافي والرياضي. إليك بعض الجوانب
-                الرئيسية للحياة الطلابية في الجامعة:
+                {t(
+                  "الحياة الطلابية في جامعة إسطنبول جليشيم تتميز بتنوع الأنشطة والفرص التي تتيح للطلاب تجربة أكاديمية وشخصية غنية. بالإضافة إلى البرامج التعليمية المتميزة، تسعى الجامعة إلى توفير بيئة تعليمية تشجع على النمو الاجتماعي والثقافي والرياضي. إليك بعض الجوانب الرئيسية للحياة الطلابية في الجامعة:"
+                )}
+
                 <p className="leading-relaxed  font-medium text-[18px] text-gray-700">
                   <br />
-                  الأنشطة الطلابية: جامعة جليشيم توفر فرصًا للطلاب للمشاركة في
-                  العديد من الأنشطة الثقافية والاجتماعية، مثل المعارض الفنية،
-                  العروض المسرحية، وحفلات الموسيقى.
+                  {t(
+                    "الأنشطة الطلابية: جامعة جليشيم توفر فرصًا للطلاب للمشاركة في العديد من الأنشطة الثقافية والاجتماعية، مثل المعارض الفنية، العروض المسرحية، وحفلات الموسيقى."
+                  )}
                 </p>
                 <p className="leading-relaxed  font-medium text-[18px] text-gray-700">
-                  النوادي الطلابية: هناك العديد من النوادي الطلابية التي تغطي
-                  مجالات متنوعة مثل الرياضة، الفنون، التقنية، اللغات، والمزيد.
-                  هذه النوادي تمنح الطلاب فرصة للتفاعل مع الآخرين وبناء مهارات
-                  جديدة.
+                  {t(
+                    "النوادي الطلابية: هناك العديد من النوادي الطلابية التي تغطي مجالات متنوعة مثل الرياضة، الفنون، التقنية، اللغات، والمزيد. هذه النوادي تمنح الطلاب فرصة للتفاعل مع الآخرين وبناء مهارات جديدة."
+                  )}
                 </p>
                 <p className="leading-relaxed  font-medium text-[18px] text-gray-700">
-                  المهرجانات والفعاليات: تستضيف الجامعة عدة مهرجانات خلال العام،
-                  مثل مهرجانات الثقافة والفنون، حيث يشارك الطلاب في عروض فنية،
-                  موسيقية، ورياضات.
+                  {t(
+                    "المهرجانات والفعاليات: تستضيف الجامعة عدة مهرجانات خلال العام، مثل مهرجانات الثقافة والفنون، حيث يشارك الطلاب في عروض فنية، موسيقية، ورياضات."
+                  )}
                 </p>
                 <p className="leading-relaxed  font-medium text-[18px] text-gray-700">
-                  الرياضات الجماعية والفردية: يمكن للطلاب المشاركة في فرق رياضية
-                  تمثل الجامعة في مسابقات محلية ودولية. هناك أيضًا فرص لممارسة
-                  الرياضات الفردية مثل اللياقة البدنية، السباحة، وركوب الدراجات.
+                  {t(
+                    "الرياضات الجماعية والفردية: يمكن للطلاب المشاركة في فرق رياضية تمثل الجامعة في مسابقات محلية ودولية. هناك أيضًا فرص لممارسة الرياضات الفردية مثل اللياقة البدنية، السباحة، وركوب الدراجات."
+                  )}
                 </p>
               </p>
               <Image src={altn} className="mt-5" />
@@ -358,7 +365,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  مميزات الدراسة في جامعة جليشم
+                  {t("مميزات الدراسة في جامعة جليشيم")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -378,24 +385,29 @@ const gelisim = () => {
               </summary>
 
               <p className="mt-4 leading-relaxed text-xl font-bold text-gray-700">
-                الدراسة في جامعة إسطنبول جليشيم تتميز بعدد من الخصائص التي
-                تجعلها وجهة مثالية للطلاب المحليين والدوليين. إليك أبرز مميزات
-                الدراسة في جامعة جليشيم:
+                {t(
+                  "الدراسة في جامعة إسطنبول جليشيم تتميز بعدد من الخصائص التي تجعلها وجهة مثالية للطلاب المحليين والدوليين. إليك أبرز مميزات الدراسة في جامعة جليشيم:"
+                )}
+
                 <br />
-                تنوع التخصصات: تقدم الجامعة برامج أكاديمية في مجموعة واسعة من
-                التخصصات، مثل الهندسة، الإدارة، العلوم الصحية، الفنون، التصميم،
-                واللغات. هذا يتيح للطلاب اختيار البرامج التي تتناسب مع
-                اهتماماتهم وطموحاتهم المهنية.
+                {t(
+                  "تنوع التخصصات: تقدم الجامعة برامج أكاديمية في مجموعة واسعة من التخصصات، مثل الهندسة، الإدارة، العلوم الصحية، الفنون، التصميم، واللغات. هذا يتيح للطلاب اختيار البرامج التي تتناسب مع اهتماماتهم وطموحاتهم المهنية."
+                )}
+
                 <br />
-                تعليم باللغة الإنجليزية: تقدم الجامعة برامج باللغة الإنجليزية في
-                العديد من التخصصات، ما يجعلها مناسبة للطلاب الدوليين.
+                {t(
+                  "تعليم باللغة الإنجليزية: تقدم الجامعة برامج باللغة الإنجليزية في العديد من التخصصات، ما يجعلها مناسبة للطلاب الدوليين."
+                )}
+
                 <br />
-                المرافق الحديثة: تحتوي الجامعة على مرافق حديثة ومتطورة مثل
-                القاعات الدراسية الذكية، المختبرات المتخصصة، المراكز البحثية،
-                والمكتبات الرقمية، مما يسهم في توفير بيئة تعليمية مريحة وفعّالة.
+                {t(
+                  "المرافق الحديثة: تحتوي الجامعة على مرافق حديثة ومتطورة مثل القاعات الدراسية الذكية، المختبرات المتخصصة، المراكز البحثية، والمكتبات الرقمية، مما يسهم في توفير بيئة تعليمية مريحة وفعّالة."
+                )}
+
                 <br />
-                التكنولوجيا الحديثة: تدمج الجامعة التكنولوجيا الحديثة في التعليم
-                من خلال توفير أدوات وموارد إلكترونية متقدمة لدعم تجربة التعلم.
+                {t(
+                  "التكنولوجيا الحديثة: تدمج الجامعة التكنولوجيا الحديثة في التعليم من خلال توفير أدوات وموارد إلكترونية متقدمة لدعم تجربة التعلم."
+                )}
               </p>
               <Image src={altnnn} className="mt-5" />
             </details>
@@ -405,7 +417,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  الأوراق المطلوبة للتقديم على جامعة جليشم
+                  {t("الأوراق المطلوبة للتقديم على جامعة جليشيم")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -426,58 +438,65 @@ const gelisim = () => {
 
               <div className="flex flex-wrap gap-12 justify-center">
                 <div className="absolute text-fuchsia-700 text-4xl font-bold mt-36 max-lg:text-2xl">
-                  <p className="mr-6 max-lg:mr-16">بكالوريوس</p>
+                  <p className="mr-6 max-lg:mr-16">{t("بكالوريوس")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem]">
-                    شهادة الثانوية العامة
+                    {t("شهادة الثانوية العامة")}
                     <br />
                     <hr className="my-1" />
-                    كشف الدرجات
+                    {t("كشف الدرجات")}
+
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("جواز السفر")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <Image src={awrak} className="" />
                 <div className="absolute text-fuchsia-700 mr-[45%] text-4xl font-bold mt-36 max-lg:mr-[40rem] max-lg:text-2xl">
-                  <p className="mr-8  max-lg:mr-28">ماجستير</p>
+                  <p className="mr-8  max-lg:mr-28">{t("ماجستير")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] max-lg:mr-8">
-                    شهادة البكالوريوس <br />
-                    <hr className="my-1" />
-                    كشف الدرجات
+                    {t("شهادة البكالوريوس")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("كشف الدرجات")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("جواز السفر")}
+                    <br />
+                    <hr className="my-1" />
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <div className="absolute text-fuchsia-700 ml-[45%] text-4xl font-bold mt-36 max-lg:ml-[40rem] max-lg:text-2xl">
-                  <p className="mr-12 max-lg:mr-24">دبلومة</p>
+                  <p className="mr-12 max-lg:mr-24">{t("دبلومة")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] max-lg:ml-8 ">
-                    شهادة الثانوية العامة
+                    {t("شهادة الثانوية العامة")}
                     <br />
                     <hr className="my-1" />
-                    كشف الدرجات
+                    {t("كشف الدرجات")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("جواز السفر")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <div className="absolute text-fuchsia-700 text-4xl mt-[40%] font-bold max-lg:mt-[38rem]  max-lg:text-2xl">
-                  <p className="mr-5 max-lg:mr-20">الدكتوراة</p>
+                  <p className="mr-5 max-lg:mr-20">{t("الدكتوراة")}</p>
                   <p className="text-2xl mt-16 text-center text-yellow-300 max-lg:w-[16rem] ">
-                    شهادة الماجستير <br />
-                    <hr className="my-1" />
-                    كشف الدرجات
+                    {t("شهادة الماجستير")}
                     <br />
                     <hr className="my-1" />
-                    جواز السفر <br />
+                    {t("كشف الدرجات")}
+                    <br />
                     <hr className="my-1" />
-                    صور شخصية{" "}
+                    {t("جواز السفر")}
+                    <br />
+                    <hr className="my-1" />
+                    {t("صور شخصية")}
                   </p>
                 </div>
                 <Image src={awrak} className="" />
@@ -491,7 +510,7 @@ const gelisim = () => {
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-2xl font-bold text-fuchsia-950">
-                  كليات وتخصصات جامعة جليشم
+                  {t("كليات وتخصصات جامعة جليشيم")}
                 </h2>
 
                 <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
@@ -513,9 +532,9 @@ const gelisim = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    دبلومه
+                    {t("دبلومة")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عامان دراسي)
+                      {t("مدة الدراسة عامان دراسي")}
                     </b>
                   </h2>
 
@@ -591,39 +610,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            justice-العدالة
+                            {t("العدالة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -683,39 +702,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Operating Room Services -خدمات غرف العمليات
+                            {t("خدمات غرف العمليات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -775,39 +794,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Physiotherapy -العلاج الطبيعي
+                            {t("العلاج الطبيعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -867,39 +886,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Laboratory Techniques -تقنيات المخابر الطبية
+                            {t("تقنيات المخابر الطبية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -959,39 +978,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Anesthesia -التخدير
+                            {t("التخدير")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1051,39 +1070,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            First Aid And Emergency -الإسعافات الأولية و الطوارئ
+                            {t("الإسعافات الأولية و الطوارئ")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1143,40 +1162,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Radio And Television Programming - راديو وتلفزيون
-                            وسينما
+                            {t("راديو وتلفزيون وسينما")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1236,40 +1254,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1329,39 +1346,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Graphic Design - تصميم الجرافيك
+                            {t("تصميم الجرافيك")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1421,39 +1438,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Interior Design -التصميم الداخلي
+                            {t("التصميم الداخلي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1513,39 +1530,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Banking And Insurance - الخدمات المصرفية والتأمين
+                            {t("الخدمات المصرفية والتأمين")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1605,39 +1622,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Trade - التجارة الدولية
+                            {t("التجارة الدولية والأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1697,40 +1714,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامةالمهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1790,39 +1806,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sports Management - الإدارة الرياضية
+                            {t(" الادارة الرياضية ")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1882,39 +1898,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Oral And Dental Health -صحة الفم و الأسنان
+                            {t("صحة الفم والأسنان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -1974,39 +1990,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Audiometry -الأذن و قياس السمع
+                            {t("الأذن وقياس السمع")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -2066,39 +2082,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Opticianry -البصريات
+                            {t("البصريات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -2158,39 +2174,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Imaging Techniques -تقنيات التصوير الطبي
+                            {t("تقنيات التصوير الطبي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -2250,2160 +2266,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Programming -برمجة الكومبيوتر
+                            {t("برمجة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            justice-العدالة
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Biomedical Device Technology -تكنلوجيا المعدات
-                            الطبية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dialysis -غسيل الكلى
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Medical Documentation And Secretarial -السكرتاريا
-                            الطبية و التوثيق
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Podology -علم القدم
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Construction Technology -تكنلوجيا البناء
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Logistics -الخدمات اللوجستية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Fashion Design -تصميم الأزياء
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electric -الكهرباء
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Mechatronics -الميكاترونيك
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Applied English And Translation -الترجمة التطبيقية
-                            (التركية-الإنجليزية)
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Food Technology -تكنلوجيا التغذية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Information Security Technology -تكنلوجيا أمن
-                            المعلومات
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Cookery -الطهو
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer-Aided Design And Animation -التصميم بمساعدة
-                            الكومبيوتر و الرسوم المتحركة
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Maritime And Port Management -إدارة الموانئ البحرية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Technologies -تكنلوجيا الكومبيوتر
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Technologies -تكنلوجيا الكومبيوتر
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Air Logistics -الخدمات اللوجستية الجوية
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Mechanics -المحركات
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Automotive Technologies -تكنلوجيا السيارات
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Tourist Guiding -الإرشاد السياحي
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              2750$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Flight Dispatching Management -إدارة مراسل الطيران
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              5500${" "}
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4464,40 +2359,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Hair Care And Beauty Services -العناية بالشعر و
-                            الخدمات التجميلية
+                            {t("تكنولوجيا المعدات الطبية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4557,39 +2451,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Radiotherapy -المعالجة بالإشعاع
+                            {t("غسيل الكلى")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4649,40 +2543,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Food Quality Control And Analysis -مراقبة جودة
-                            الأغذية و تحليلها
+                            {t("السكرتاريا الطبية والتوثيق")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4742,39 +2635,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Autopsy Assistantship -مساعد تشريح
+                            {t("علم القدم")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4834,40 +2727,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electro Neurophysiology -الفيزيولوجيا الكهربائية
-                            العصبية
+                            {t("تكنلوجيا البناء")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -4927,40 +2819,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electronic Communication Technology-تكنولوجيا
-                            الاتصالات الإلكترونية
+                            {t("اداره الخدمات اللوجستية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5020,39 +2911,132 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Institutions Management -إدارة المنشآت الصحية
+                            {t("تصميم الازياء")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الترجمة التطبيقيةالتركية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الانجليزية")}{" "}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5112,40 +3096,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Air Transport Management -إدارة النقل في
-                            الطيران المدني
+                            {t("تكنلوجيا التغذية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5205,40 +3188,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Orthopaedic Prosthesis And Orthesis -الأطراف
-                            الصناعية و تقويم العظام
+                            {t("امن المعلومات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5298,39 +3280,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aircraft Technology-تكنولوجيا الطائرات
+                            {t("الطهو")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5390,40 +3372,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Hybrid And Electric Vehicle Technology -تكنولوجيا
-                            المركبات الكهربائية
+                            {t("التصميم بمساعدة الكمبيوتر والرسوم المتحركة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5483,39 +3464,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("إدارة الموانئ البحرية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5575,39 +3556,1697 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Human Resource Management -إدارة الموارد البشرية
+                            {t("تكنلوجيا الكومبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               5500${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الخدمات اللوجستية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الآلات")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تكنلوجيا السيارات")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الإرشاد السياحي")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("إدارة مراسل الطيران")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("العناية بالشعر والخدمات التجميلية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("المعالجة بالإشعاع")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("مراقبة جودة الأغذية وتحليلها")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("مساعد تشريح")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الفيزيولوجيا الكهربائية العصبية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تكنولوجيا الاتصالات الإلكترونية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("إدارة المنشآت الصحية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("إدارة النقل في الطيران المدني")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("الأطراف الصناعية وتقويم العظام")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تكنولوجيا الطائرات")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تكنولوجيا المركبات الكهربائية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("تنمية الطفل")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              2750$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("إدارة الموارد البشرية")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              5500${" "}
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               2750$
                             </p>
@@ -5622,9 +5261,9 @@ const gelisim = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    بكالوريوس{" "}
+                    {t("بكالوريوس")}{" "}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة 4اعوام دراسية)
+                      {t("مدة الدراسة 4 أعوام دراسية")}
                     </b>
                   </h2>
 
@@ -5699,39 +5338,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dentistry-طب الأسنان
+                            {t("طب الأسنان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               23000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               13000$
                             </p>
@@ -5791,39 +5430,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Dentistry-طب الأسنان
+                            {t("طب الأسنان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               26000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               17250$
                             </p>
@@ -5883,39 +5522,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -5975,39 +5614,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5000$
                             </p>
@@ -6067,40 +5706,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            هندسة الكهرباء و الالكترون
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6160,40 +5798,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4500$
                             </p>
@@ -6253,40 +5890,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Interior Architecture And Environmental Design -
-                            العمارة الداخلية والتصميم البيئي
+                            {t("العمارة الداخلية والتصميم البيئي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6346,40 +5982,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Interior Architecture And Environmental Design -
-                            العمارة الداخلية والتصميم البيئي
+                            {t("العمارة الداخلية والتصميم البيئي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -6439,39 +6074,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6531,39 +6166,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4500$
                             </p>
@@ -6623,40 +6258,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Management Information Systems - نظم المعلومات
-                            الادارية
+                            {t("نظم المعلومات الإدارية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6716,40 +6350,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Radio And Television Programming - راديو وتلفزيون
-                            وسينما
+                            {t("راديو وتلفزيون وسينما")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6809,39 +6442,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Software Engineering - هندسة البرمجيات
+                            {t("هندسة البرمجيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               10000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5000$
                             </p>
@@ -6901,39 +6534,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Software Engineering - هندسة البرمجيات
+                            {t("هندسة البرمجيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -6993,39 +6626,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Industrial Engineering - الهندسة الصناعية
+                            {t("الهندسة الصناعية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7085,39 +6718,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Architecture - العمارة
+                            {t("العمارة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7177,39 +6810,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Architecture - العمارة
+                            {t("العمارة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4500$
                             </p>
@@ -7269,39 +6902,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Gastronomy And Culinary Arts - فن الطهو وفنون الطهي
+                            {t("فن الطهو وفنون الطهي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7361,39 +6994,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Gastronomy And Culinary Arts - فن الطهو وفنون الطهي
+                            {t("فن الطهو وفنون الطهي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -7453,39 +7086,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7545,39 +7178,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4500$
                             </p>
@@ -7637,40 +7270,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7730,40 +7362,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -7823,39 +7454,132 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص:
+                            {t("التخصص")}:
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sociology - علم الاجتماع
+                            {t("علم الاجتماع")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
+                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
+                              3500$
+                            </p>
+                          </div>
+                        </div>
+                      </blockquote>
+
+                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                        <div className="flex items-center gap-4">
+                          <Image
+                            alt=""
+                            src={logo}
+                            className="size-14 rounded-full object-cover"
+                          />
+
+                          <div>
+                            <div className="flex justify-center gap-0.5 text-yellow-500">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+
+                            <p className="mt-0.5 text-lg font-medium text-gray-900">
+                              {t("جليشيم")}{" "}
+                            </p>
+                          </div>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("التخصص")} :
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            {t("علم النفس")}
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 flex">
+                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
+                            {t("لغة الدراسة :")}
+                          </p>
+                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                            <b className="text-red-600">{t("التركية")}</b>
+                          </p>
+                        </div>
+                        <hr className="my-2" />
+                        <div className="mt-4 text-gray-800 font-semibold text-lg">
+                          {t("المصروفات الدراسية:")}
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("قبل الخصم :")}
+                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
+                              7000$
+                            </del>
+                          </div>
+                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -7915,224 +7639,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Television Reporting and Programming-التقارير
-                            والبرمجة{" "}
+                            {t("علم النفس")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              7000$
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              3500$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Psychology - علم النفس{" "}
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              7000$
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              3500$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Psychology - علم النفس{" "}
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -8192,40 +7731,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Physiotherapy And Rehabilitation - العلاج الطبيعي
-                            وإعادة التأهيل
+                            {t("العلاج الطبيعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -8285,40 +7823,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Physiotherapy And Rehabilitation - العلاج الطبيعي
-                            وإعادة التأهيل{" "}
+                            {t("العلاج الطبيعي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -8378,39 +7915,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Speech And Language Therapy - علاج النطق واللغة
+                            {t("علاج النطق واللغة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -8470,40 +8007,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("التمريض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -8563,39 +8100,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nursing - تمريض
+                            {t("التمريض")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -8655,40 +8192,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nutrition And Dietetics -التغذية والحمية
+                            {t("التغذية والحمية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -8748,39 +8285,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Nutrition And Dietetics -التغذية والحمية
+                            {t("التغذية والحمية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -8840,14 +8377,14 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
@@ -8858,23 +8395,23 @@ const gelisim = () => {
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -8934,40 +8471,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Graphic Design - تصميم الجرافيك
+                            {t("تصميم الجرافيك")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9027,41 +8564,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aircraft Electrical And Electronics - كهرباء
-                            وإلكترونيات الطائرات
+                            {t("كهرباء وإلكترونيات الطائرات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9121,40 +8657,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aviation Management - إدارة الطيران
+                            {t("إدارة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9214,40 +8750,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aerospace Engineering - هندسة الطيران
+                            {t("هندسة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9307,39 +8843,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aerospace Engineering - هندسة الطيران
+                            {t("هندسة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </p>
@@ -9399,41 +8935,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            English Translation And Interpreting - الترجمة
-                            الإنجليزية والترجمة الفورية
+                            {t("الترجمة الإنجليزية والترجمة الفورية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9493,40 +9028,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Mechatronics Engineering - هندسة الميكاترونكس
+                            {t("هندسة الميكاترونكس")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9586,41 +9121,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            English Language And Literature - اللغة الإنجليزية
-                            وآدابها
+                            {t("اللغة الإنجليزية وآدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9680,40 +9214,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9773,39 +9307,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -9865,41 +9399,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Trade And Business - التجارة الدولية
-                            والأعمال
+                            {t("التجارة الدولية والأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -9959,40 +9492,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Trade And Business - التجارة الدولية
-                            والأعمال{" "}
+                            {t("التجارة الدولية والأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -10052,40 +9584,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Logistics Management - إدارة الخدمات اللوجستية
+                            {t("إدارة الخدمات اللوجستية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10145,39 +9677,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Logistics Management - إدارة الخدمات اللوجستية
+                            {t("إدارة الخدمات اللوجستية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -10237,40 +9769,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Communication And Design - الاتصال والتصميم
+                            {t("الاتصال والتصميم")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10330,40 +9862,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Interior Architecture - العمارة الداخلية
+                            {t("العمارة الداخلية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10423,40 +9955,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10516,41 +10048,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Turkish Language And Literature - اللغة التركية
-                            وآدابها
+                            {t("اللغة التركية وآدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10610,41 +10141,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Communication - وسائل الإعلام
-                            والاتصالات الجديدة
+                            {t("وسائل الإعلام والاتصالات الجديدة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10704,41 +10234,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            New Media And Communication - وسائل الإعلام
-                            والاتصالات الجديدة
+                            {t("وسائل الإعلام والاتصالات الجديدة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10798,46 +10327,47 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Exercise And Sport Sciences - التمارين وعلوم الرياضة
+                            {t("التمارين وعلوم الرياضة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
                           </div>
                         </div>
                       </blockquote>
+
                       <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                         <div className="flex items-center gap-4">
                           <Image
@@ -10891,41 +10421,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Television Journalism And Programming - البرمجة
-                            والصحافة التلفزيونية
+                            {t("الخدمة الاجتماعية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -10985,40 +10514,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Social Service - الخدمة الاجتماعية
+                            {t("صيانة وإصلاح الطائرات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11078,41 +10607,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aircraft Maintenance And Repair - صيانة وإصلاح
-                            الطائرات
+                            {t("الخدمات المصرفية والتأمين")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11172,40 +10700,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Banking And Insurance - الخدمات المصرفية والتأمين
+                            {t("التجارة الإلكترونية والإدارة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11265,41 +10793,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electronic Commerce And Management - التجارة
-                            الإلكترونية والإدارة
+                            {t("المدرب الرياضي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11359,133 +10886,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Coach Training-المدرب الرياضي
+                            {t("المدرب الرياضي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
-                            <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                              7000$
-                            </del>
-                          </div>
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
-                            <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
-                              3500$
-                            </p>
-                          </div>
-                        </div>
-                      </blockquote>
-                      <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                        <div className="flex items-center gap-4">
-                          <Image
-                            alt=""
-                            src={logo}
-                            className="size-14 rounded-full object-cover"
-                          />
-
-                          <div>
-                            <div className="flex justify-center gap-0.5 text-yellow-500">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="size-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-
-                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
-                          </p>
-                          :
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Coach Training-المدرب الرياضي
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 flex">
-                          <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
-                          </p>
-                          <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
-                          </p>
-                        </div>
-                        <hr className="my-2" />
-                        <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
-                          <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -11545,41 +10979,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Exercise And Sport For People With
-                            Disabilities-ممارسة و علوم الرياضة المعاقين
+                            {t("ممارسة وعلوم الرياضة للمعاقين")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11639,40 +11072,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Recreation-الاستجمام
+                            {t("الاستجمام")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11732,40 +11165,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sports Management - الإدارة الرياضية
+                            {t("الإدارة الرياضية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11825,40 +11258,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Therapy -العلاج الوظيفي
+                            {t("العلاج الوظيفي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -11918,40 +11351,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Perfusion Techniques -تقنيات الحقن و القسطرة
+                            {t("تقنيات الحقن والقسطرة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12011,40 +11444,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12104,40 +11537,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -12197,40 +11630,40 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص
+                            {t("التخصص")}
                           </p>
                           :
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Tourism Guidance-الإرشاد السياحي
+                            {t("الإرشاد السياحي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12245,9 +11678,9 @@ const gelisim = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    ماجستير بدون أطروحة{" "}
+                    {t("ماجستير بدون أطروحة")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عام ونصف دراسي)
+                      {t("مدة الدراسة عام ونصف دراسي")}
                     </b>
                   </h2>
 
@@ -12322,39 +11755,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12414,39 +11847,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -12506,40 +11939,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6300$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12599,40 +12031,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة{" "}
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -12692,39 +12123,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12784,39 +12215,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -12876,40 +12307,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -12969,39 +12399,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13061,39 +12491,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -13153,40 +12583,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13246,39 +12675,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aviation Management - إدارة الطيران
+                            {t("إدارة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               12000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13338,40 +12767,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Trade And Logistics -التجارة الدولية
-                            واللوجستيات
+                            {t("التجارة الدولية والأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13431,39 +12859,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13523,39 +12951,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -13615,39 +13043,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13707,40 +13135,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Turkish Language And Literature - اللغة التركية
-                            وآدابها
+                            {t("اللغة التركية وآدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13800,40 +13227,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13893,40 +13319,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامة المهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -13986,39 +13411,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sports Management - الإدارة الرياضية
+                            {t("الإدارة الرياضية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14078,39 +13503,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14170,39 +13595,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Clinical Psychology-علم النفس السريري
+                            {t("علم النفس السريري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               15000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               15000$
                             </p>
@@ -14262,39 +13687,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الإدارة الهندسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14354,40 +13779,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Administration And Political Science-الإدارة
-                            العامة و العلوم السياسية
+                            {t("الإدارة العامة والعلوم السياسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14447,40 +13871,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Administration And Political Science-الإدارة
-                            العامة و العلوم السياسية{" "}
+                            {t("الإدارة العامة والعلوم السياسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -14540,39 +13963,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Tourism Guidance-الإرشاد السياحي
+                            {t("الإرشاد السياحي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14632,40 +14055,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Logistics And Transportation-الخدمات
-                            اللوجستية الدولية و النقل
+                            {t("الخدمات اللوجستية الدولية والنقل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14725,40 +14147,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Exercise And Training Sciences-علوم التمرين و
-                            التدريب
+                            {t("علوم التمرين والتدريب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               3500$
                             </p>
@@ -14773,9 +14194,9 @@ const gelisim = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    ماجستير مع أطروحة{" "}
+                    {t("ماجستير مع أطروحة")}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة عامان دراسي)
+                      {t("مدة الدراسة عامان دراسي")}
                     </b>
                   </h2>
 
@@ -14850,39 +14271,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -14942,39 +14363,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -15034,40 +14455,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4000$
                             </p>
@@ -15127,40 +14547,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة{" "}
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15220,39 +14639,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15312,39 +14731,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Computer Engineering - هندسة الكمبيوتر
+                            {t("هندسة الكمبيوتر")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4500$
                             </p>
@@ -15404,40 +14823,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Electrical And Electronics Engineering -هندسة
-                            الكهرباء و الالكترون
+                            {t("هندسة الكهرباء والاكترونيات")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15497,39 +14915,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15589,39 +15007,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               10000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5500$
                             </p>
@@ -15681,40 +15099,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Relations And Advertising - العلاقات العامة
-                            والإعلان
+                            {t("العلاقات العامة والإعلان")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15774,39 +15191,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aviation Management - إدارة الطيران
+                            {t("إدارة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               12000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15866,40 +15283,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Trade And Logistics -التجارة الدولية
-                            واللوجستيات
+                            {t("التجارة الدولية والأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -15959,39 +15375,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16051,39 +15467,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية{" "}
+                            {t("الانجليزية")}{" "}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5000$
                             </p>
@@ -16143,39 +15559,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Health Management -الإدارة الصحية
+                            {t("الإدارة الصحية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16235,40 +15651,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Turkish Language And Literature - اللغة التركية
-                            وآدابها
+                            {t("اللغة التركية وآدابها")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16328,40 +15743,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Visual Communication Design - تصميم الاتصالات
-                            المرئية
+                            {t("تصميم الاتصالات المرئية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16421,40 +15835,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Occupational Health And Safety - الصحة والسلامة
-                            المهنية
+                            {t("الصحة والسلامة المهنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16514,39 +15927,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sports Management - الإدارة الرياضية
+                            {t("الإدارة الرياضية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               7000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16606,39 +16019,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Child Develeopment -تنمية الطفل
+                            {t("تنمية الطفل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16698,39 +16111,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Clinical Psychology-علم النفس السريري
+                            {t("علم النفس السريري")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               15000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               15000$
                             </p>
@@ -16790,39 +16203,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Engineering Management-الإدارة الهندسية
+                            {t("الإدارة الهندسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16882,40 +16295,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Administration And Political Science-الإدارة
-                            العامة و العلوم السياسية
+                            {t("الإدارة العامة والعلوم السياسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -16975,40 +16387,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Public Administration And Political Science-الإدارة
-                            العامة و العلوم السياسية{" "}
+                            {t("الإدارة العامة والعلوم السياسية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               8500$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               5000$
                             </p>
@@ -17068,39 +16479,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Tourism Guidance-الإرشاد السياحي
+                            {t("الإرشاد السياحي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -17160,40 +16571,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            International Logistics And Transportation-الخدمات
-                            اللوجستية الدولية و النقل
+                            {t("الخدمات اللوجستية الدولية والنقل")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -17253,40 +16663,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Exercise And Training Sciences-علوم التمرين و
-                            التدريب
+                            {t("علوم التمرين والتدريب")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               4250$
                             </p>
@@ -17301,9 +16710,9 @@ const gelisim = () => {
               <details className="group [&_summary::-webkit-details-marker]:hidden w-[90%] bg-slate-100 my-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                   <h2 className="font-bold text-gray-800 text-3xl">
-                    دكتوراه{" "}
+                    {t("دكتوراه")}{" "}
                     <b className="text-red-500 font-bold text-2xl pr-6">
-                      (مدة الدراسة 4اعوام دراسية)
+                      {t("مدة الدراسة 4 أعوام دراسية")}
                     </b>
                   </h2>
 
@@ -17378,39 +16787,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Business Administration -إدارة الأعمال
+                            {t("إدارة الأعمال")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17470,39 +16879,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Civil Engineering - الهندسة المدنية
+                            {t("الهندسة المدنية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17562,40 +16971,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Political Science And International Relations -
-                            العلوم السياسية والإدارة العامة
+                            {t("العلوم السياسية والإدارة العامة")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17655,39 +17063,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Gastronomy And Culinary Arts - فن الطهو وفنون الطهي
+                            {t("فن الطهو وفنون الطهي")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17747,39 +17155,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Aerospace Engineering - هندسة الطيران
+                            {t("هندسة الطيران")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17839,39 +17247,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -17931,39 +17339,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Economics And Finance -الاقتصاد والمالية
+                            {t("الاقتصاد والمالية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            الانجليزية
+                            {t("الانجليزية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               9000${" "}
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               8000$
                             </p>
@@ -18023,39 +17431,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Sports Management - الإدارة الرياضية
+                            {t("الإدارة الرياضية")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>
@@ -18115,40 +17523,39 @@ const gelisim = () => {
                             </div>
 
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
-                              جليشم{" "}
+                              {t("جليشيم")}{" "}
                             </p>
                           </div>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            التخصص :
+                            {t("التخصص")} :
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            Movement And Training Sciences-علم الحركة و التدريب
-                            البدني
+                            {t("الحركة والتدريب البدني")}
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 flex">
                           <p className="text-gray-800 text-lg pl-1 font-semibold ">
-                            لغة الدراسة :
+                            {t("لغة الدراسة :")}
                           </p>
                           <p className="text-gray-600 text-sm pr-1 mt-1 font-medium">
-                            <b className="text-red-600">التركية</b>
+                            <b className="text-red-600">{t("التركية")}</b>
                           </p>
                         </div>
                         <hr className="my-2" />
                         <div className="mt-4 text-gray-800 font-semibold text-lg">
-                          المصروفات الدراسية:
+                          {t("المصروفات الدراسية:")}
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            قبل الخصم :
+                            {t("قبل الخصم :")}
                             <del className="text-gray-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </del>
                           </div>
                           <div className="text-gray-700 text-sm pr-1 mt-1 font-medium flex">
-                            بعد الخصم :
+                            {t("بعد الخصم :")}
                             <p className="text-red-600 text-sm pr-1 mt-1 font-medium">
                               6000$
                             </p>

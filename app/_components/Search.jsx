@@ -14,24 +14,22 @@ const Dropdown = ({ options, selected, setSelected, placeholder }) => {
   };
 
   return (
-    <div className="relative">
-      {/* زر القائمة */}
+    <div className="relative w-full md:w-1/3">
       <button
         onClick={toggleMenu}
-        className="flex items-center w-80 py-3 text-center rounded-full bg-white opacity-70 font-bold text-2xl justify-center text-gray-600 hover:bg-gray-200 focus:outline-none"
+        className="flex items-center w-full py-3 text-center rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300 font-bold text-xl justify-center text-gray-600 hover:bg-gray-100 focus:outline-none"
       >
-        {selected || <span className="text-sm md:text-xl">{placeholder}</span>}
+        {selected || <span className="text-sm md:text-lg">{placeholder}</span>}
       </button>
 
-      {/* القائمة المنسدلة */}
       {isOpen && (
-        <div className="absolute mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg max-h-56 overflow-y-auto">
+        <div className="absolute mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-56 overflow-y-auto z-[9999]">
           <ul className="py-1">
             {options.map((option, index) => (
               <li key={index}>
                 <button
                   onClick={() => handleOptionClick(option)}
-                  className="block px-6 mx-auto py-4 text-[17px] text-gray-700 hover:bg-gray-100 w-full text-right"
+                  className="block px-6 py-4 text-[17px] text-gray-700 hover:bg-blue-100 w-full text-right transition-colors duration-200"
                 >
                   {option}
                 </button>
@@ -46,12 +44,10 @@ const Dropdown = ({ options, selected, setSelected, placeholder }) => {
 
 const Search = () => {
   const { t } = useTranslation();
-
   const [selectedSpecialty, setSelectedSpecialty] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedLang, setSelectedLang] = useState("");
 
-  // الخيارات المتاحة
   const specialties = [
     t("الطب البشري"),
     t("الصيدلة"),
@@ -89,7 +85,7 @@ const Search = () => {
     t("الدعاية والاعلان"),
     t("تصميم الازياء"),
     t("تصميم الجرافيك"),
-    t(" الطيران"),
+    t("الطيران"),
   ];
 
   const programs = [
@@ -100,54 +96,42 @@ const Search = () => {
   ];
   const lang = [t("اللغة التركية"), t("اللغة الإنجليزية")];
 
-  const customStyles = {
-    placeholder: (base) => ({
-      ...base,
-      fontSize: "14px",
-    }),
-  };
-
   return (
     <>
-      <div className="flex gap-9 items-center rounded-bl-[8rem] rounded-tl-[3rem] max-sm:w-[79rem] max-lg:w-[79rem] mb-16 -mt-6 bg-fuchsia-800 w-10/12 h-28 z-50 rounded-br-[8rem] rounded-tr-[3rem] opacity-95 mx-auto py-2 px-16">
-        {/* القائمة الأولى */}
+      <div className="flex mb-24 flex-col md:flex-row mt-9 gap-6 items-center rounded-full w-11/12 md:w-10/12 h-auto md:h-28 z-50 border-4 border-[#7a0066c6] opacity-95 mx-auto py-12 px-6 md:px-16 bg-[#dddddd31] shadow-2xl">
         <Dropdown
           options={programs}
           selected={selectedProgram}
           setSelected={setSelectedProgram}
           placeholder={t("ابحث عن البرنامج الدراسي...🔎")}
-          className="placeholder:text-gray-500 placeholder:font-bold"
         />
-        {/* القائمة الثانية */}
         <Dropdown
           options={lang}
           selected={selectedLang}
           setSelected={setSelectedLang}
           placeholder={t("ابحث عن لغة الدراسة...🔎")}
-          className="placeholder:text-gray-500 placeholder:font-bold"
         />
-        {/* القائمة الثالثة */}
         <Dropdown
           options={specialties}
           selected={selectedSpecialty}
           setSelected={setSelectedSpecialty}
           placeholder={t("ابحث عن تخصصك...🔎")}
-          className="placeholder:text-gray-500 placeholder:font-bold"
         />
+        <b className="text-[#7a0066c6] h-16 text-5xl">|</b>
         <a
           href={
             selectedProgram && selectedLang && selectedSpecialty
               ? "../search"
               : "#"
           }
-          className={`bg-white rounded-full ${
+          className={`bg-white rounded-full p-2 ${
             selectedProgram && selectedLang && selectedSpecialty
-              ? ""
+              ? "hover:bg-blue-500 hover:text-white transition-colors duration-300"
               : "opacity-50 cursor-not-allowed"
           }`}
           onClick={(e) => {
             if (!selectedProgram || !selectedLang || !selectedSpecialty) {
-              e.preventDefault(); // منع الانتقال إلى صفحة البحث
+              e.preventDefault();
               alert(
                 t(
                   "يرجى اختيار البرنامج الدراسي، لغة الدراسة، والتخصص قبل البحث!"

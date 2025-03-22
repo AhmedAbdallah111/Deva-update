@@ -1,0 +1,8 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/detailss/page": "app/detailss/page.js",
+  "/madonatna/page": "app/madonatna/page.js",
+  "/khadamat/page": "app/khadamat/page.js",
+  "/takass/details/page": "app/takass/details/page.js",
+  "/takass/details/overview/page": "app/takass/details/overview/page.js"
+}

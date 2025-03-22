@@ -18,7 +18,6 @@ import mos from "../../Public/Animation/mos.json";
 import bank from "../../Public/Animation/bank.json";
 import phone from "../../Public/Animation/phone.json";
 import car from "../../Public/Animation/car.json";
-import sale from "../../Public/images/sale2.jpg";
 import t4 from "../../Public/images/saydala.jpg";
 import t5 from "../../Public/images/basry.jpg";
 import t6 from "../../Public/images/asnan.jpg";
@@ -137,10 +136,6 @@ const khadamat = () => {
           {t("خدمتنا مابعد القبول")}
         </h1>
         <div className="max-sm:w-[79rem]">
-          <Image
-            src={sale}
-            className=" mx-auto w-[50rem] h-96 max-sm:w-[75rem] max-lg:w-[75rem]"
-          />
           <p
             className={`text-gray-100 absolute py-4 font-bold text-center w-[27rem] max-lg:w-[39rem] max-lg:mr-72 max-lg:leading-10 rounded-full mr-[35%] -my-[22rem] px-4 max-sm:w-[39rem] max-sm:mr-72 max-sm:leading-10 ${
               i18n.language !== "ar" ? "text-base font-semibold" : "text-xl"

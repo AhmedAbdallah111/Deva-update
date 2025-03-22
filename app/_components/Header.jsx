@@ -36,12 +36,12 @@ const Header = () => {
   const navLinks = useMemo(() => {
     const links = [
       { href: "/", label: "الصفحة الرئيسية" },
-      { href: "/universitys", label: "جامعتنا" },
-      { href: "/khadamat", label: "خدامتنا" },
+      { href: "/universitys", label: "الجامعات" },
+      { href: "/khadamat", label: "الخدمات" },
       { href: "/takass", label: "جميع التخصصات" },
-      { href: "/mannahno", label: "من نحن" },
-      { href: "/KonWakelna", label: "كن وكيلنا" },
-      { href: "/madonatna", label: "مدونتنا" },
+      { href: "/mannahno", label: "من  نكون" },
+      { href: "/KonWakelna", label: "كن شريكنا المعتمد " },
+      { href: "/madonatna", label: "المدوَّنات" },
     ];
 
     return i18n.language === "ar" || i18n.language === "fa"
@@ -146,7 +146,7 @@ const Header = () => {
               href="/search"
               className="px-4 py-2 bg-yellow-500 text-fuchsia-800 rounded-2xl mr-6 font-bold hover:bg-yellow-600 transition-colors duration-200"
             >
-              {t("تسجيل")}
+              {t("سجل الاّن")}
             </a>
           </nav>
 

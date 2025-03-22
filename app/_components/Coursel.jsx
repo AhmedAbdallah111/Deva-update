@@ -1,280 +1,314 @@
 "use client";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import sayha from "../../Public/images/sayha.jpg";
-import asnan from "../../Public/images/asnan.jpg";
-import tamred from "../../Public/images/alag.jpg";
-import saydala from "../../Public/images/saydala.jpg";
-import basry from "../../Public/images/basry.jpg";
-import alag from "../../Public/images/علاج-موقع.jpg";
-import asaf from "../../Public//images/التمريض-موقع.jpg";
-import taksaya from "../../Public/images/takzya.jpg";
-import takhader from "../../Public/images/tkh.jpg";
-import hantab from "../../Public/images/handsaTaby.jpg";
-import car from "../../Public/images/c.jpg";
-import barmga from "../../Public/images/barmga.jpg";
-import handtay from "../../Public/images/handsa tayran.jpg";
-import meka from "../../Public/images/mekaatros.jpg";
-import mekaneka from "../../Public/images/mekaneka.jpg";
-import amara from "../../Public/images/emara.jpg";
-import tamsem from "../../Public/images/tasmem.jpg";
-import kmya from "../../Public/images/handsaKemya.jpg";
-import zka from "../../Public/images/zakaasany.jpg";
-import fadaa from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.01 PM.jpeg";
-import kaza from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.02 PM.jpeg";
-import kahrba from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.02 PM (2).jpeg";
-import manzar from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.07 PM.jpeg";
-import edarahan from "../../Public/images/edaraHandsa.jpg";
-import amal from "../../Public/images/ادارة-الاعمال.jpg";
-import edara1 from "../../Public/images/edara1.jpeg";
-import lagost from "../../Public/images/kadmatlag.jpg";
-import nazm from "../../Public/images/nzm.jpg";
-import amn from "../../Public/images/امن-المعلومات.jpg";
-import alaka from "../../Public/images/التجارة-الدولية.jpg";
-import masrah from "../../Public/images/2-المسرح.jpg";
-import daya from "../../Public/images/موقع-دعايا-وعلان.jpg";
-import music from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.08 PM (3).jpeg";
-import cocik from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.08 PM (2).jpeg";
-import matha from "../../Public/images/معلم-الرياضيات-2.jpg";
-import kmyaa from "../../Public/images/معلم-الكيمياء21.jpg";
-import tafl from "../../Public/images/تنميه-الطفل-2.jpg";
-import eslim from "../../Public/images/الدراسات-الاسلاميه.-2jpg.jpg";
-import falsfa from "../../Public/images/flsfa.jpg";
-import sahfa from "../../Public/images/sahafa.jpeg";
-import trgma from "../../Public/images/الترجمه-3.jpg";
-import tarzy from "../../Public/images/WhatsApp Image 2025-01-16 at 11.42.08 PM (1).jpeg";
-import disgenr from "../../Public/images/تصميم-الجرافيك-موقع.jpg";
-import mag1 from "../../Public/images/edara2.jpg";
-import kanon from "../../Public/images/kanon.jpg";
-import gum from "../../Public/images/edara1.jpeg";
-import tayar from "../../Public/images/Handsata.jpg";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const imagesSet1 = [
-  { src: asnan, name: "طب الاسنان" },
-  { src: alag, name: "العلاج الطبيعي" },
-  { src: saydala, name: "الصيدلة" },
-  { src: basry, name: "الطب البشري" },
-  { src: tamred, name: "التمريض" },
-  { src: asaf, name: "الاسعافات الاولية" },
-  { src: taksaya, name: "التغذية" },
-  { src: takhader, name: "التخدير" },
-];
-const imagesSet2 = [
-  { src: hantab, name: "الهندسة الطبية" },
-  { src: barmga, name: "هندسة البرمجيات" },
-  { src: car, name: "هندسة السيارات" },
-  { src: handtay, name: "هندسة الطيران" },
-  { src: meka, name: "هندسة الميكاترونكس" },
-  { src: mekaneka, name: "هندسة الميكانيكا" },
-  { src: amara, name: "هندسة المعمار" },
-  { src: tamsem, name: "هندسة التصميم الداخلي" },
-  { src: kmya, name: "الهندسة الكميائية" },
-  {
-    src: zka,
-    name: "هندسة الذكاء الاصطناعي",
-  },
-  {
-    src: fadaa,
-    name: "هندسة الفضاء",
-  },
-  {
-    src: kaza,
-    name: "الهندسة الغذائية",
-  },
-  {
-    src: kahrba,
-    name: "هندسة الكهرباء والاكترونيات",
-  },
-  {
-    src: manzar,
-    name: "هندسة المناظر الطبيعية",
-  },
-];
-const imagesSet3 = [
-  { src: edarahan, name: "الادارة الهندسية" },
-  { src: amal, name: "ادارة الاعمال" },
-  { src: edara1, name: "الادارة الطبية" },
-  {
-    src: lagost,
-    name: "اداره الخدمات اللوجستية",
-  },
-  { src: nazm, name: "نظم المعلومات الادارية" },
-  { src: amn, name: "امن المعلومات" },
-  { src: alaka, name: "العلاقات الدولية" },
-];
-const imagesSet4 = [
-  { src: masrah, name: "المسرح" },
-  {
-    src: music,
-    name: "الموسيقي",
-  },
-  {
-    src: cocik,
-    name: "فن الطهي والطبخ",
-  },
-];
-const imagesSet5 = [
-  { src: matha, name: "معلم الرياضيات" },
-  { src: kmyaa, name: "معلم الكمياء" },
-];
-const imagesSet6 = [
-  { src: tafl, name: "تنمية الطفل" },
-  { src: trgma, name: "الترجمة" },
-  { src: eslim, name: " الدراسات الأسلامية " },
-  { src: sayha, name: " الارشاد السياحي " },
-  { src: falsfa, name: "  الفلسفة " },
-];
-const imagesSet7 = [
-  {
-    src: sahfa,
-    name: "الصحافة",
-  },
-  {
-    src: daya,
-    name: "الدعاية والاعلان",
-  },
-];
-const imagesSet8 = [
-  {
-    src: tarzy,
-    name: "تصميم الازياء",
-  },
-  {
-    src: disgenr,
-    name: "تصميم الجرافيك",
-  },
-];
-const imagesSet9 = [
-  {
-    src: mag1,
-    name: " الادارة الرياضية ",
-  },
-  {
-    src: gum,
-    name: "التدريب الرياضي ",
-  },
-];
-const imagesSet10 = [
-  {
-    src: kanon,
-    name: "القانون ",
-  },
-  {
-    src: tayar,
-    name: " الطيران",
-  },
-];
-
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Coursel = () => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images]);
+  const categories = [
+    { id: "all", name: "الكل" },
+    { id: "diploma", name: "الدبلومة" },
+    { id: "bachelor", name: "البكالوريوس" },
+    { id: "master", name: "الماجستير" },
+    { id: "phd", name: "الدكتوراه" },
+  ];
+
+  const images = {
+    diploma: [
+      { src: "/images/التمريض-موقع.jpg", title: t("التمريض"), type: "medical" },
+      {
+        src: "/images/fam-removebg-preview.png",
+        title: t("صحة الفم والاسنان"),
+        type: "medical",
+      },
+      {
+        src: "/images/kalya-removebg-preview.png",
+        title: t("غسيل الكلي"),
+        type: "medical",
+      },
+      {
+        src: "/images/esaaf-removebg-preview.png",
+        title: t(" الاسعافات الاولية"),
+        type: "medical",
+      },
+      {
+        src: "/images/doc-takhader-removebg-preview.png",
+        title: "التخدير",
+        type: "medical",
+      },
+      {
+        src: "/images/tahlel-removebg-preview.png",
+        title: "تقنيات المخابر الطبية",
+        type: "medical",
+      },
+      {
+        src: "/images/basaryat.jpg",
+        title: "البصريات",
+        type: "medical",
+      },
+      {
+        src: "/images/mogohrat-removebg-preview.png",
+        title: "تصميم المجوهرات",
+        type: "engineering",
+      },
+      {
+        src: "/images/masrfya-removebg-preview.png",
+        title: "المصرفية والتأمين",
+        type: "business",
+      },
+      {
+        src: "/images/debloma-bus-removebg-preview.png",
+        title: "ادارة الاعمال",
+        type: "business",
+      },
+    ],
+    bachelor: [
+      { src: "/images/saydala.jpg", title: t("صيدلة"), type: "medical" },
+      { src: "/images/asnan.jpg", title: "طب الأسنان", type: "medical" },
+      { src: "/images/basry.jpg", title: "طب بشري", type: "medical" },
+      {
+        src: "/images/علاج-موقع.jpg",
+        title: " العلاج الطبيعي",
+        type: "medical",
+      },
+      {
+        src: "/images/takzya.jpg",
+        title: "  التغذية والحمية",
+        type: "medical",
+      },
+      {
+        src: "/images/handsaTaby.jpg",
+        title: "الهندسة الطبية",
+        type: "engineering",
+      },
+      {
+        src: "/images/zakaasany.jpg",
+        title: "الذكاء الاصطناعي",
+        type: "engineering",
+      },
+      {
+        src: "/images/mekaatros.jpg",
+        title: "هندسة الميكاترونكس",
+        type: "engineering",
+      },
+      {
+        src: "/images/handsa tayran.jpg",
+        title: "هندسة الطيران",
+        type: "engineering",
+      },
+      {
+        src: "/images/WhatsApp Image 2025-01-16 at 11.42.01 PM.jpeg",
+        title: "هندسة الفضاء",
+        type: "engineering",
+      },
+
+      {
+        src: "/images/barmga.jpg",
+        title: "هندسة البرمجيات",
+        type: "engineering",
+      },
+      {
+        src: "/images/WhatsApp Image 2025-01-16 at 11.42.07 PM.jpeg",
+        title: "هندسة المناظر الطبعية",
+        type: "engineering",
+      },
+      {
+        src: "/images/WhatsApp Image 2025-01-16 at 11.42.02 PM.jpeg",
+        title: "الهندسة الغذاائية",
+        type: "engineering",
+      },
+      {
+        src: "/images/WhatsApp Image 2025-01-16 at 11.42.02 PM (2).jpeg",
+        title: "هندسة الكهرباء والالكترونيات",
+        type: "engineering",
+      },
+      {
+        src: "/images/c.jpg",
+        title: "هندسة السيارات",
+        type: "engineering",
+      },
+      {
+        src: "/images/mekaneka.jpg",
+        title: "هندسة الميكانيكا",
+        type: "engineering",
+      },
+      {
+        src: "/images/emara.jpg",
+        title: "هندسة المعمار",
+        type: "engineering",
+      },
+      {
+        src: "/images/tasmem.jpg",
+        title: "هندسة التصميم",
+        type: "engineering",
+      },
+      {
+        src: "/images/handsaKemya.jpg",
+        title: "هندسة الكمياء",
+        type: "engineering",
+      },
+      {
+        src: "/images/التجارة-الدولية.jpg",
+        title: " التجارة الدولية",
+        type: "business",
+      },
+      {
+        src: "/images/kadmatlag.jpg",
+        title: "ادارة الخدمات اللوجستية",
+        type: "business",
+      },
+      {
+        src: "/images/امن-المعلومات.jpg",
+        title: "امن المعلومات",
+        type: "business",
+      },
+      {
+        src: "/images/nzm.jpg",
+        title: "نظم المعلومات الادارية",
+        type: "business",
+      },
+      {
+        src: "/images/edaraHandsa.jpg",
+        title: "الادارة الهندسية",
+        type: "business",
+      },
+      {
+        src: "/images/edara2.jpg",
+        title: "الادارة الرياضية",
+        type: "business",
+      },
+      {
+        src: "/images/ادارة-الاعمال.jpg",
+        title: "ادارة الاعمال",
+        type: "business",
+      },
+      {
+        src: "/images/edara1.jpeg",
+        title: "الادراة الطبية",
+        type: "business",
+      },
+    ],
+    master: [
+      {
+        src: "/images/debloma-bus-removebg-preview.png",
+        title: "ادارة الاعمال",
+        type: "business",
+      },
+      { src: "/img8.jpg", title: "هندسة كهربائية", type: "engineering" },
+    ],
+    phd: [
+      {
+        src: "/images/debloma-bus-removebg-preview.png",
+        title: "ادارة الاعمال",
+        type: "business",
+      },
+    ],
+  };
+
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const getImages = () => {
+    let selectedImages =
+      activeCategory === "all"
+        ? Object.values(images).flat()
+        : images[activeCategory] || [];
+
+    // إزالة التكرار باستخدام Set بناءً على العنوان
+    const uniqueImages = [];
+    const seenTitles = new Set();
+
+    selectedImages.forEach((item) => {
+      if (!seenTitles.has(item.title)) {
+        seenTitles.add(item.title);
+        uniqueImages.push(item);
+      }
+    });
+
+    // تصنيف الصور حسب المجال
+    const groupedByType = {};
+    uniqueImages.forEach((item) => {
+      if (!groupedByType[item.type]) {
+        groupedByType[item.type] = [];
+      }
+      groupedByType[item.type].push(item);
+    });
+
+    // إنشاء قائمة مرتبة تحتوي على العناوين والمحتوى
+    return Object.keys(groupedByType).flatMap((type) => [
+      {
+        type: "header",
+        title:
+          type === "medical"
+            ? "التخصصات الطبية"
+            : type === "engineering"
+            ? "التخصصات الهندسية"
+            : type === "business"
+            ? "التخصصات الإدارية"
+            : type === "literary"
+            ? "التخصصات الأدبية والتربوية"
+            : "التخصصات العامة",
+      },
+      ...groupedByType[type],
+    ]);
+  };
 
   return (
-    <div className="relative w-full overflow-hidden flex flex-wrap justify-center items-center h-auto max-sm:w-[80rem] max-lg:w-[70rem]">
-      <div className="grid grid-cols-1 max-sm:grid-cols-3 max-sm:gap-24 max-lg:grid-cols-3 max-lg:gap-24  lg:grid-cols-4 gap-20 justify-center ">
-        {images.map((image, index) => {
-          const isActive = index === currentIndex;
-          return (
-            <div key={index} className="flex flex-col items-center">
-              <motion.div
-                className="relative w-64 h-96 sm:w-64 sm:h-96 flex-shrink-0"
-                initial={{ scale: 1 }}
-                animate={{ scale: isActive ? 1.25 : 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </motion.div>
-              <motion.p
-                className="text-center text-xl sm:text-lg font-bold bg-fuchsia-800 rounded-full px-3 py-1 mt-3"
-                initial={{ scale: 1 }}
-                animate={{ scale: isActive ? 1.25 : 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                {t(image.name)}
-              </motion.p>
+    <div className="flex mb-56">
+      {/* Sidebar */}
+      <div className="w-1/5 h-[100vh] shadow-lg bg-gradient-to-b from-[#e8b2c3] to-[#f6f4f5] text-center border-r-8 border-[#e8b2c3] rounded-l-3xl text-2xl font-semibold text-gray-700 p-5 pr-0 space-y-6 sticky top-0">
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            className={`block w-full p-3 text-center rounded-l-full transition-all duration-300 ${
+              activeCategory === category.id
+                ? "bg-[#7a0066] text-white shadow-md scale-105"
+                : "hover:bg-[#a35b7a] hover:text-white"
+            }`}
+            onClick={() => setActiveCategory(category.id)}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
+
+      {/* Images Section */}
+      <div className="flex-1 grid grid-cols-3 mr-5 bg-gradient-to-b from-[#f6f4f5] to-[#a19b9a10] gap-12 gap-y-16 p-5 rounded-xl shadow-md">
+        {getImages().map((item, index) =>
+          item.type === "header" ? (
+            <div
+              key={index}
+              className="col-span-3 bg-[#eed1e8] py-2 rounded-3xl text-2xl font-bold text-[#7a0066] text-center my-4"
+            >
+              {item.title}
             </div>
-          );
-        })}
+          ) : (
+            <div
+              key={index}
+              className="text-center  transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src={item.src}
+                alt={item.title}
+                className="w-72 h-56 rounded-lg rounded-b-none border border-[#7a00663e] shadow-xl transition duration-300 hover:shadow-2xl"
+              />
+              {/* اسم التخصص */}
+              <p className="text-lg w-72 rounded-lg rounded-b-none rounded-t-none text-center py-2 font-semibold text-white bg-gradient-to-r from-[#b83280] to-[#7a0066] shadow-md">
+                {item.title}
+              </p>
+              {/* زر اقرأ المزيد بنفس الخلفية */}
+              <a
+                href="../takass/details"
+                className="flex items-center justify-center cursor-pointer w-72 py-2 text-white font-semibold bg-gradient-to-r from-[#b83280] to-[#7a0066] rounded-b-xl shadow-md transition duration-300 hover:from-[#7a0066] hover:to-[#45193d]"
+              >
+                اقرأ المزيد
+                <span className="text-xl text-white">➡️</span>
+              </a>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
 };
 
-const CarouselsPage = () => {
-  const { t } = useTranslation();
-
-  return (
-    <>
-      <div className="space-y-16 sm:px-8 pb-9">
-        <Carousel images={imagesSet1} />
-        <hr className="w-10/12 mx-auto pt-5" />
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          {t("التخصصات الهندسية")}
-        </h1>
-        <Carousel images={imagesSet2} />
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          {t("التخصصات الأدارية")}
-        </h1>
-        <Carousel images={imagesSet3} />
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          تخصصات الفن والمسرح
-        </h1>
-        <Carousel images={imagesSet4} />
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          {t("تخصصات العلوم العامة")}
-        </h1>
-        <Carousel images={imagesSet5} />
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          التخصصات الادبية التربوية
-        </h1>
-        <Carousel images={imagesSet6} />
-
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          تخصصات الصحافة والاعلام
-        </h1>
-        <Carousel images={imagesSet7} />
-        <hr className="w-10/12 mx-auto pt-5" />
-
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          تخصصات التصميم
-        </h1>
-        <Carousel images={imagesSet8} />
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          {t("التخصصات الرياضية ")}
-        </h1>
-        <Carousel images={imagesSet9} />
-        <h1 className="text-2xl md:text-3xl font-bold text-center max-sm:mr-[26rem] max-lg:mr-[30rem] max-sm:px-12 max-sm:my-12 max-sm:w-[30rem] text-white bg-fuchsia-700 px-6 py-2 w-fit mx-auto rounded-full">
-          تخصصات عامة
-        </h1>
-        <Carousel images={imagesSet10} />
-      </div>
-    </>
-  );
-};
-
-export default CarouselsPage;
+export default Coursel;

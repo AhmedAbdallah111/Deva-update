@@ -20,7 +20,7 @@ import { useTranslation } from "react-i18next";
 const Card = ({ title, description, image, onClick }) => {
   return (
     <div
-      className="relative bg-fuchsia-800  rounded-2xl shadow-xl p-4 w-96 h-72 flex flex-wrap  cursor-pointer transition-transform hover:opacity-70 hover:scale-105"
+      className="relative shadow-2xl border-r-fuchsia-700 border-l-fuchsia-700 border-b-fuchsia-700 border-t-fuchsia-700  rounded-2xl  border p-4 w-96 h-72 flex flex-wrap  cursor-pointer transition-transform  hover:scale-105"
       onClick={onClick}
     >
       <div className="w-full h-32 relative mb-2">
@@ -32,7 +32,7 @@ const Card = ({ title, description, image, onClick }) => {
           className="rounded-lg"
         />
       </div>
-      <h2 className="text-xl text-white font-bold mx-auto text-center">
+      <h2 className="text-xl text-[#7a0066c6] font-bold mx-auto text-center">
         {title}
       </h2>
     </div>
@@ -44,7 +44,7 @@ const Madonatna = () => {
   const [expandedCard, setExpandedCard] = useState(null);
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "ar";
-  // بيانات الكروت
+
   const cardsData = [
     {
       title: t("كيف تبدأ رحلتك الدراسية في تركيا؟"),
@@ -315,81 +315,71 @@ const Madonatna = () => {
         src={cover}
         className=" h-[80vh]  md:w-full max-sm:pt-16 max-sm:h-[70vh] max-lg:min-w-[80rem] max-sm:max-w-[80rem] pt-16  max-sm:object-cover"
       />
-      <div className="flex max-lg:w-[75rem]">
-        <div className="w-5 -z-10 mx-auto h-28 bg-fuchsia-900"></div>
-        <div className="w-5 -z-10 mx-auto h-28 bg-fuchsia-900"></div>
-      </div>
+
       <h1
-        className={`mx-auto font-bold px-6 w-fit max-lg:w-[75rem] max-lg:text-center max-lg:mr-12 rounded-2xl my-10 text-yellow-500 -mt-6 bg-fuchsia-800 py-6 
+        className={`mx-auto font-bold px-6  max-lg:text-center  rounded-2xl my-10  mt-6  py-6   text-3xl  tracking-wide mb-8 rounded-tl-2xl border border-dashed  border-r-red-900 border-l-red-900 border-b-fuchsia-700 border-t-fuchsia-700 rounded-br-2xl text-center items-center max-lg:w-[40rem] max-lg:mr-80 text-[#7A0066CB] bg-[#eed1e8] w-fit p-2
   ${i18n.language === "ru" ? "text-2xl" : "text-3xl"}`}
       >
         {" "}
         {t("وجهتك الأولى لكل ما تحتاجه عن الدراسة والحياة الطلابية في تركيا")}
       </h1>
-      {/* الخلفية */}
+
       {expandedCard !== null && (
         <div
           className="fixed inset-0 bg-black/30  backdrop-blur-sm flex items-center justify-center z-50 mt-20 min-w-full max-sm:w-[70rem]  max-sm:-mr-[50rem] max-lg:-mr-[32rem] md:w-[70rem] lg:w-[75rem]"
           onClick={() => setExpandedCard(null)}
         >
-          <div className="relative backdrop-blur-lg bg-slate-100 inset-0 rounded-2xl shadow-xl p-6 pt-3 w-[65%] max-lg:w-[75rem]max-lg:w-[75rem] h-[80vh] overflow-y-auto">
-            <div className="w-full h-48 relative mb-4">
+          <div className="relative backdrop-blur-xl bg-white/80 shadow-2xl rounded-2xl p-8 w-[65%] max-lg:w-[75rem] h-[80vh] overflow-y-auto scrollbar-hidden">
+            <div className="w-full h-48 relative mb-6 rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={cardsData[expandedCard].image}
                 alt={cardsData[expandedCard].title}
                 layout="fill"
-                objectFit="fit"
-                className="rounded-lg h-48 bg-fuchsia-800"
+                objectFit="cover"
+                className="rounded-lg"
               />
             </div>
-            <h2 className="text-3xl font-bold text-yellow-500 text-center mb-4">
+
+            {/* العنوان الرئيسي */}
+            <h2 className="text-4xl font-extrabold text-fuchsia-800 text-center mb-4 drop-shadow-lg">
               {cardsData[expandedCard].title}
             </h2>
-            <p className="text-center text-xl text-gray-600 font-semibold mb-4">
+
+            {/* الوصف الأساسي */}
+            <p className="text-center text-lg text-gray-700 font-medium leading-relaxed mb-6 px-4">
               {cardsData[expandedCard].description}
             </p>
-            <p className="font-semibold  mt-6 text-gray-700 mb-2">
-              {cardsData[expandedCard].extraText1}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText2}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText12}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText13}
-            </p>
-            <p className="font-semibold  mt-6 text-gray-700 mb-2">
-              {cardsData[expandedCard].extraText3}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText4}
-            </p>
-            <p className="font-semibold  mt-6 text-gray-700 mb-2">
-              {cardsData[expandedCard].extraText5}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText6}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText7}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText8}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText9}
-            </p>
-            <p className="pr-2  text-gray-500">
-              {cardsData[expandedCard].extraText10}
-            </p>
+
+            {/* المحتوى الإضافي مُنظم بشكل أفضل */}
+            <div className="grid gap-4 text-gray-600">
+              {[
+                {
+                  label: cardsData[expandedCard].extraText1,
+                  content: cardsData[expandedCard].extraText2,
+                },
+                {
+                  label: cardsData[expandedCard].extraText3,
+                  content: cardsData[expandedCard].extraText4,
+                },
+                {
+                  label: cardsData[expandedCard].extraText5,
+                  content: cardsData[expandedCard].extraText6,
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100/70 p-4 rounded-lg shadow-md"
+                >
+                  <p className="font-semibold text-gray-900">{item.label}</p>
+                  <p className="text-gray-600">{item.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
 
-      {/* الشبكة */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-10 max-lg:w-[79rem] max-sm:pr-52 max-lg:grid-cols-2 bg-gray-100 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-10 max-lg:w-[79rem] max-sm:pr-52 max-lg:grid-cols-2">
         {cardsData.map((card, index) => (
           <Card
             key={index}
